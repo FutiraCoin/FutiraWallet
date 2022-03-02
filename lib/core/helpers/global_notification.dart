@@ -1,22 +1,21 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:auto_route/auto_route.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:flutter_tdd/core/routes/router_imports.gr.dart';
+import 'package:injectable/injectable.dart';
 
 import 'helper_methods.dart';
 
-
+@lazySingleton
 class GlobalNotification {
   static final StreamController<Map<String, dynamic>> _onMessageStreamController =
   StreamController.broadcast();
 
   late FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin;
   static late BuildContext context;
-  static GlobalNotification instance =GlobalNotification._();
+  // static GlobalNotification instance =GlobalNotification._();
   static FirebaseMessaging messaging = FirebaseMessaging.instance;
   GlobalNotification._();
 
