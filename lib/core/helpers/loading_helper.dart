@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_tdd/core/constants/my_colors.dart';
+import 'package:injectable/injectable.dart';
 
+@lazySingleton
 class LoadingHelper {
 
    void showLoadingDialog() {
@@ -26,7 +28,7 @@ class LoadingHelper {
         status: "loading");
   }
 
-  static showLoadingView({Color? color}) {
+  showLoadingView({Color? color}) {
     return Center(
       child: SpinKitFoldingCube(
         color: color ?? MyColors.primary,
@@ -35,7 +37,7 @@ class LoadingHelper {
     );
   }
 
-  static showCatLoadingView({Color? color}) {
+  showCatLoadingView({Color? color}) {
     return Center(
       child: SpinKitRipple(
         color: color ?? MyColors.primary,
