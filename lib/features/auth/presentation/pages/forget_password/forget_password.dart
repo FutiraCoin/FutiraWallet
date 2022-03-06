@@ -15,7 +15,10 @@ class _ForgetPasswordState extends State<ForgetPassword> {
       appBar: BuildAuthAppBar(),
       body: ListView(padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
           children: [
-            ForgetPasswordText(),
+            BuildHeaderTitle(
+              title: "Reset your password",
+              subTitle: "In order for us to be able to reset your password, please Enter your phone number below",
+            ),
             BuildForgetForm(forgetPasswordData: forgetPasswordData,),
             BuildForgetPasswordButton(forgetPasswordData: forgetPasswordData,),
           ],

@@ -14,7 +14,6 @@ class BuildForgetForm extends StatelessWidget {
         action: TextInputAction.next,
         validate: (value) => value?.validatePhone(context),
         label: "Phone Number",
-        margin: EdgeInsets.only(top: 20),
         prefixIcon: Padding(
           padding: const EdgeInsets.all(12.0),
           child: SvgPicture.asset(Res.mobile),

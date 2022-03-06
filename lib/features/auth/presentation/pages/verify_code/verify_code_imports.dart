@@ -5,6 +5,8 @@ import 'package:flutter_tdd/features/auth/presentation/widgets/build_pin_field.d
 import 'package:tf_custom_widgets/tf_custom_widgets.dart';
 import 'package:tf_custom_widgets/utils/generic_cubit/generic_cubit.dart';
 
+import '../../widgets/build_header_title.dart';
+
 
 part 'verify_code.dart';
 part 'verify_code_data.dart';

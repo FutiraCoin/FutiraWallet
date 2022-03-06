@@ -17,6 +17,7 @@ class RegisterPhoneForm extends StatelessWidget {
               fieldTypes: FieldTypes.normal,
               type: TextInputType.phone,
               action: TextInputAction.next,
+              controller: registerData.phone,
               validate: (value) => value?.validatePhone(context),
               label: "Mobile Number",
               margin: EdgeInsets.only(top: 20),
@@ -32,6 +33,7 @@ class RegisterPhoneForm extends StatelessWidget {
               action: TextInputAction.done,
               validate: (value) => value?.validatePassword(context),
               label: "Password",
+              controller: registerData.password,
               margin: EdgeInsets.only(top: 20),
               prefixIcon: Padding(
                 padding: const EdgeInsets.all(12.0),

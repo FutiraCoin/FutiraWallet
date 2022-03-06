@@ -23,7 +23,10 @@ class _ActiveAccountState extends State<ActiveAccount> {
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
         children: [
-          BuildHeaderTitle(),
+          BuildHeaderTitle(
+            title: "Enter your security code",
+            subTitle: "In order for us to be able to reset your password, please enter your phone number below.",
+          ),
           BuildPinField(
             onComplete: activeAccountData.onComplete,
           ),

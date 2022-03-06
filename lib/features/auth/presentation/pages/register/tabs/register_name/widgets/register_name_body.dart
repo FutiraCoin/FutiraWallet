@@ -18,6 +18,7 @@ class RegisterNameBody extends StatelessWidget {
               fieldTypes: FieldTypes.normal,
               type: TextInputType.name,
               action: TextInputAction.next,
+              controller: registerData.name,
               validate: (value) => value?.validateEmpty(context),
               label: "Your name",
               margin: EdgeInsets.only(top: 20),

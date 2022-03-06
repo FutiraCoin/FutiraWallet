@@ -13,7 +13,7 @@ class _IntroScreenState extends State<IntroScreen> {
     return Scaffold(
       backgroundColor: MyColors.white,
       body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: 15,vertical: 20),
+        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
         children: [
           BuildIntroHeader(),
           MyText(
@@ -23,9 +23,21 @@ class _IntroScreenState extends State<IntroScreen> {
             letterSpace: 1.5,
           ),
           SizedBox(height: 50),
-          BuildSocialRegisterButton(title: "Continue with Facebook", icon: Res.facebook),
-          BuildSocialRegisterButton(title: "Continue with Apple", icon: Res.apple),
-          BuildSocialRegisterButton(title: "Continue with Mobile Number", icon: Res.mobile),
+          BuildSocialRegisterButton(
+            title: "Continue with Facebook",
+            icon: Res.facebook,
+            onTap: () {},
+          ),
+          BuildSocialRegisterButton(
+            title: "Continue with Apple",
+            icon: Res.apple,
+            onTap: () {},
+          ),
+          BuildSocialRegisterButton(
+            title: "Continue with Mobile Number",
+            icon: Res.mobile,
+            onTap: () => AutoRouter.of(context).push(RegisterRoute()),
+          ),
           BuildLoginNavigation()
         ],
       ),

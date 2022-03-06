@@ -8,16 +8,20 @@ class RegisterNameButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isEmpty = registerData.registerBloc.state.data.name.isEmpty;
-    return AbsorbPointer(
-      absorbing: isEmpty,
-      child: DefaultButton(
-          title: "Next",
-          onTap: () => registerData.goNext(),
-          color: isEmpty? MyColors.offWhite:MyColors.primary,
-          textColor: isEmpty? MyColors.black:MyColors.white,
-          margin: EdgeInsets.symmetric(horizontal: 20),
-          fontSize: 16,),
+    return BlocBuilder<GenericBloc<RegisterParams>, GenericState<RegisterParams>>(
+      bloc: registerData.registerBloc,
+      builder: (context, state) {
+        return AbsorbPointer(
+          absorbing: state.data.name.isEmpty,
+          child: DefaultButton(
+            title: "Next",
+            onTap: () => registerData.goNext(),
+            color: state.data.name.isEmpty ? MyColors.offWhite : MyColors.primary,
+            textColor: state.data.name.isEmpty ? MyColors.black : MyColors.white,
+            margin: EdgeInsets.symmetric(horizontal: 20,vertical: 15),
+            fontSize: 16,),
+        );
+      },
     );
   }
 }

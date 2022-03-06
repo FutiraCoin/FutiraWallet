@@ -5,5 +5,4 @@ import 'package:tf_custom_widgets/tf_custom_widgets.dart';
 
 import '../active_account_imports.dart';
 
-part 'build_header_title.dart';
 part 'build_active_button.dart';

@@ -16,7 +16,10 @@ class _ResetPasswordState extends State<ResetPassword> {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
         children: [
-        ResetPasswordText(),
+          BuildHeaderTitle(
+            title: "Set new password",
+            subTitle: "In order for us to be able to reset your password, please Enter your phone number below",
+          ),
           ResetPasswordForm(resetPasswordData: resetPasswordData),
           ResetPasswordButton(resetPasswordData: resetPasswordData,),
       ],),

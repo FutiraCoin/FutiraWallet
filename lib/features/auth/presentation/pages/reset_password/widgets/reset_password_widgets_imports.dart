@@ -10,5 +10,4 @@ import 'package:flutter_tdd/core/helpers/validator.dart';
 
 
 part 'reset_password_form.dart';
-part 'reset_password_text.dart';
 part 'reset_password_button.dart';

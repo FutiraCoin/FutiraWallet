@@ -15,7 +15,6 @@ class ResetPasswordForm extends StatelessWidget {
           controller: resetPasswordData.password,
           validate: (value) => value?.validatePassword(context),
           label: "New password",
-          margin: EdgeInsets.only(top: 20),
           prefixIcon: Padding(
             padding: const EdgeInsets.all(12.0),
             child: SvgPicture.asset(Res.password),

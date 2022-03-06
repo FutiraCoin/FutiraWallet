@@ -17,19 +17,17 @@ class _RegisterState extends State<Register> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<GenericBloc<RegisterParams>,GenericState<RegisterParams>>(
-      bloc: registerData.registerBloc,
-      builder: (context,state) {
-        return PageView(
-          scrollDirection: Axis.horizontal,
-          children: [
-            RegisterName(registerData: registerData),
-            RegisterPhone(name: registerData.name.text,registerData: registerData,),
-            RegisterActiveAccount(registerData: registerData),
-          ],
-          controller: registerData.pageController,
-        );
-      }
+    return Scaffold(
+      backgroundColor: MyColors.white,
+      body: PageView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          RegisterName(registerData: registerData),
+          RegisterPhone(registerData: registerData,),
+          RegisterActiveAccount(registerData: registerData),
+        ],
+        controller: registerData.pageController,
+      ),
     );
   }
 }

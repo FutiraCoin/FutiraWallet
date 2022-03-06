@@ -13,7 +13,7 @@ class RegisterData{
   TextEditingController phone = TextEditingController();
   TextEditingController password = TextEditingController();
 
-   GenericBloc <RegisterParams> registerBloc =GenericBloc(RegisterParams(name: '',phone: "",password: "",code: "z"));
+   GenericBloc<RegisterParams> registerBloc =GenericBloc(RegisterParams(name: '',phone: "",password: "",code: "z"));
 
   goNext(){
     pageController.nextPage(duration: Duration(milliseconds: 500), curve: Curves.easeInOut);

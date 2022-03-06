@@ -10,6 +10,5 @@ import 'package:tf_custom_widgets/tf_custom_widgets.dart';
 import 'package:flutter_tdd/core/helpers/validator.dart';
 
 
-part 'forget_password_text.dart';
 part 'build_forget_form.dart';
 part 'build_forget_password_button.dart';
