@@ -8,6 +8,9 @@ part of 'router_imports.dart';
     AdaptiveRoute(page: IntroScreen),
     AdaptiveRoute(page: Register),
     AdaptiveRoute(page: ActiveAccount),
+    AdaptiveRoute(page: VerifyCode),
+    AdaptiveRoute(page: ResetPassword),
+    AdaptiveRoute(page: ForgetPassword),
   ],
 )
 class $AppRouter {}

@@ -15,10 +15,13 @@ class BuildForgetPasswordView extends StatelessWidget {
             size: 14,
           ),
           SizedBox(width: 5),
-          MyText(
-            title: "Tap here",
-            color: MyColors.primary,
-            size: 14,
+          InkWell(
+            onTap: ()=>AutoRouter.of(context).push(ForgetPasswordRoute()),
+            child: MyText(
+              title: "Tap here",
+              color: MyColors.primary,
+              size: 14,
+            ),
           ),
         ],
       ),

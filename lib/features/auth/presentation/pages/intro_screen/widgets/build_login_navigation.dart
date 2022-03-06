@@ -6,7 +6,7 @@ class BuildLoginNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: ()=> AutoRouter.of(context).push(RegisterRoute()),
+      onTap: ()=> AutoRouter.of(context).push(LoginRoute()),
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 30),
         child: Row(
