@@ -35,7 +35,7 @@ class CustomInputDecoration extends InputDecoration {
   // TODO: implement enabledBorder
   InputBorder get enabledBorder => OutlineInputBorder(
         borderSide:
-            BorderSide(color: enableColor ?? MyColors.grey, width: .7),
+            BorderSide(color: enableColor ?? MyColors.greyWhite, width: .7),
         borderRadius: borderRadius ?? BorderRadius.circular( 10),
       );
 
