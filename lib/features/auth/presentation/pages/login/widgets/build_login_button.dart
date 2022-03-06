@@ -7,13 +7,24 @@ class BuildLoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LoadingButton(
-      title: "Login",
-      onTap: () {},
-      btnKey: loginData.btnKey,
-      margin: EdgeInsets.only(top: 40),
-      fontSize: 16,
-      height: 55
+    return BlocBuilder<GenericBloc<LoginParams>, GenericState<LoginParams>>(
+      bloc: loginData.loginCubit,
+      builder: (context, state) {
+        bool isEmpty = state.data.phone.isEmpty || state.data.pass.isEmpty;
+        return AbsorbPointer(
+          absorbing: isEmpty,
+          child: LoadingButton(
+              title: "Login",
+              onTap: () {},
+              color: isEmpty? MyColors.offWhite:MyColors.primary,
+              textColor: isEmpty? MyColors.black:MyColors.white,
+              btnKey: loginData.btnKey,
+              margin: EdgeInsets.only(top: 40),
+              fontSize: 16,
+              height: 55
+          ),
+        );
+      },
     );
   }
 }

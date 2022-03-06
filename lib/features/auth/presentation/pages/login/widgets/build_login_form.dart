@@ -12,7 +12,6 @@ class BuildLoginForm extends StatelessWidget {
       child: Column(
         children: [
           GenericTextField(
-            controller: loginData.phone,
             fieldTypes: FieldTypes.normal,
             type: TextInputType.phone,
             action: TextInputAction.next,
@@ -23,9 +22,9 @@ class BuildLoginForm extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: SvgPicture.asset(Res.mobile),
             ),
+            onChange: loginData.onChangePhone,
           ),
           GenericTextField(
-            controller: loginData.password,
             fieldTypes: FieldTypes.password,
             type: TextInputType.text,
             action: TextInputAction.done,
@@ -36,6 +35,7 @@ class BuildLoginForm extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: SvgPicture.asset(Res.password),
             ),
+            onChange: loginData.onChangePassword,
           ),
         ],
       ),

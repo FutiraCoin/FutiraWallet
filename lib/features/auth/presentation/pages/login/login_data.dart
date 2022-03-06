@@ -5,7 +5,17 @@ class LoginData {
   final GlobalKey<FormState> formKey = GlobalKey();
   final GlobalKey<CustomButtonState> btnKey = GlobalKey();
 
-  final TextEditingController phone = TextEditingController();
-  final TextEditingController password = TextEditingController();
+  final GenericBloc<LoginParams> loginCubit = GenericBloc(LoginParams(phone: "",pass: ""));
+
+
+  onChangePhone(String value){
+    loginCubit.state.data.phone = value;
+    loginCubit.onUpdateData(loginCubit.state.data);
+  }
+
+  onChangePassword(String value){
+    loginCubit.state.data.pass = value;
+    loginCubit.onUpdateData(loginCubit.state.data);
+  }
 
 }
