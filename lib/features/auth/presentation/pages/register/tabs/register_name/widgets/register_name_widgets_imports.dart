@@ -8,6 +8,5 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 
 
-part 'build_welcome_form.dart';
 part 'build_next_button.dart';
 part 'register_name_body.dart';

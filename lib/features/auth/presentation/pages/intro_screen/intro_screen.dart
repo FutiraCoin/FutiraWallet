@@ -1,4 +1,4 @@
-part of'intro_screen_imports.dart';
+part of 'intro_screen_imports.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -11,19 +11,23 @@ class _IntroScreenState extends State<IntroScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            MyText(title: "Welcome", color: MyColors.black, size: 22),
-            const SizedBox(height: 30,),
-            InkWell(
-              onTap: ()=>AutoRouter.of(context).push(RegisterRoute()),
-                child: MyText(title: "To Register", color: MyColors.primary, size: 22)),
-          ],
-        ),
+      backgroundColor: MyColors.white,
+      body: ListView(
+        padding: EdgeInsets.symmetric(horizontal: 15,vertical: 20),
+        children: [
+          BuildIntroHeader(),
+          MyText(
+            title: "Explore a new community, discover your new passion.",
+            color: MyColors.black,
+            size: 22,
+            letterSpace: 1.5,
+          ),
+          SizedBox(height: 50),
+          BuildSocialRegisterButton(title: "Continue with Facebook", icon: Res.facebook),
+          BuildSocialRegisterButton(title: "Continue with Apple", icon: Res.apple),
+          BuildSocialRegisterButton(title: "Continue with Mobile Number", icon: Res.mobile),
+          BuildLoginNavigation()
+        ],
       ),
     );
   }
