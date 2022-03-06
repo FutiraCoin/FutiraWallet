@@ -5,6 +5,8 @@ part of 'router_imports.dart';
     //auth routes
     AdaptiveRoute(page: Splash, initial: true),
     AdaptiveRoute(page: Login),
+    AdaptiveRoute(page: IntroScreen),
+    AdaptiveRoute(page: Register),
   ],
 )
 class $AppRouter {}
