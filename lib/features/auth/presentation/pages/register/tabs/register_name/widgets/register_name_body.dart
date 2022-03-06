@@ -1,23 +1,23 @@
 part of'register_name_widgets_imports.dart';
 
 class RegisterNameBody extends StatelessWidget {
-  final RegisterNameData registerNameData;
-  const RegisterNameBody({Key? key,required this.registerNameData});
+  final RegisterData registerData;
+  const RegisterNameBody({Key? key,required this.registerData});
 
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: registerNameData.formKey,
+      key: registerData.nameFormKey,
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 15,vertical: 20),
+        margin: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children:[
             MyText(title: "How can we call you?", color: MyColors.black, size: 18),
             GenericTextField(
-              controller: registerNameData.name,
               fieldTypes: FieldTypes.normal,
-              type: TextInputType.text,
-              action: TextInputAction.done,
+              type: TextInputType.name,
+              action: TextInputAction.next,
               validate: (value) => value?.validateEmpty(context),
               label: "Your name",
               margin: EdgeInsets.only(top: 20),
@@ -25,6 +25,7 @@ class RegisterNameBody extends StatelessWidget {
                 padding: const EdgeInsets.all(12.0),
                 child: SvgPicture.asset(Res.mobile),
               ),
+              onChange: registerData.onChangeName,
             ),
           ]
         ),

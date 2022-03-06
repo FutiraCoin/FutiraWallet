@@ -25,7 +25,6 @@ class _ActiveAccountState extends State<ActiveAccount> {
         children: [
           BuildHeaderTitle(),
           BuildPinField(
-            controller: activeAccountData.code,
             onComplete: activeAccountData.onComplete,
           ),
           BuildActiveButton(activeAccountData: activeAccountData),

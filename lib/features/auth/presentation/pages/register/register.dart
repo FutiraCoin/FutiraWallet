@@ -9,16 +9,27 @@ class Register extends StatefulWidget {
 
 class _RegisterState extends State<Register> {
   final RegisterData registerData = RegisterData();
+  @override
+  void initState() {
+    registerData.pageController=PageController(initialPage: 0);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return PageView(
-      scrollDirection: Axis.horizontal,
-      children: [
-        RegisterName(),
-        RegisterPhoneInputs(),
-      ],
-      controller: registerData.pageController,
+    return BlocBuilder<GenericBloc<RegisterParams>,GenericState<RegisterParams>>(
+      bloc: registerData.registerBloc,
+      builder: (context,state) {
+        return PageView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            RegisterName(registerData: registerData),
+            RegisterPhone(name: registerData.name.text,registerData: registerData,),
+            RegisterActiveAccount(registerData: registerData),
+          ],
+          controller: registerData.pageController,
+        );
+      }
     );
   }
 }
