@@ -17,7 +17,7 @@ class RegisterPhoneButton extends StatelessWidget {
             onTap: () => registerData.goNext(),
             color: isEmpty? MyColors.offWhite:MyColors.primary,
             textColor: isEmpty? MyColors.black:MyColors.white,
-            margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+            margin: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
             fontSize: 16,
           ),
         );

@@ -8,5 +8,7 @@ import 'package:flutter_tdd/features/auth/presentation/pages/reset_password/rese
 import 'package:flutter_tdd/features/auth/presentation/pages/splash/splash_imports.dart';
 import 'package:flutter_tdd/features/auth/presentation/pages/verify_code/verify_code_imports.dart';
 
+import '../../features/general/presentation/pages/terms/terms_imports.dart';
+
 
 part 'router.dart';

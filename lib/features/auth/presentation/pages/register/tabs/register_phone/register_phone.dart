@@ -12,10 +12,10 @@ class RegisterPhone extends StatefulWidget {
 class _RegisterPhoneState extends State<RegisterPhone> {
   @override
   Widget build(BuildContext context) {
+    final name = widget.registerData.name.text.split(" ").first;
     return Scaffold(
       appBar: BuildAuthAppBar(
-        title:
-            "Hello, ${widget.registerData.registerBloc.state.data.name.split(" ").first}",
+        title: "Hello, $name",
         onBack: () => widget.registerData.goBack(),
       ),
       body: ListView(
@@ -25,12 +25,9 @@ class _RegisterPhoneState extends State<RegisterPhone> {
             color: MyColors.infoColor,
             backgroundColor: MyColors.grey.withOpacity(.2),
           ),
-          RegisterPhoneForm(
-            registerData: widget.registerData,
-          ),
-          RegisterPhoneButton(
-            registerData: widget.registerData,
-          )
+          RegisterPhoneForm(registerData: widget.registerData),
+          BuildTermsView(registerData: widget.registerData),
+          RegisterPhoneButton(registerData: widget.registerData)
         ],
       ),
     );

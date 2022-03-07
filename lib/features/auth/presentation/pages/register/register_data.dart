@@ -8,6 +8,7 @@ class RegisterData{
  final GlobalKey<CustomButtonState> btnKey = GlobalKey();
  String? activeCode;
  final GenericBloc<bool> codeCubit = GenericBloc(false);
+ final GenericBloc<bool> termsCubit = GenericBloc(false);
 
   TextEditingController name = TextEditingController();
   TextEditingController phone = TextEditingController();
