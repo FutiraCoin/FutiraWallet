@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:injectable/injectable.dart';
-
 import 'core/bloc/lang_cubit/lang_cubit.dart';
 import 'core/helpers/app_them.dart';
 import 'core/helpers/general_providers.dart';
