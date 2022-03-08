@@ -68,6 +68,9 @@ dependencies:
   flutter_slidable: ^1.2.0
   get_it: ^7.2.0
   injectable: ^1.5.3
+  firebase_analytics: ^9.1.2
+  firebase_crashlytics: ^2.5.3
+
 
 
 
