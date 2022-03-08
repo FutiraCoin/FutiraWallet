@@ -21,7 +21,8 @@ import '../http/generic_http/generic_http.dart' as _i7;
 import '../network/network_info.dart' as _i14;
 import 'firebase_analytics_helper.dart' as _i6;
 import 'global_notification.dart' as _i9;
-import 'loading_helper.dart' as _i13; // ignore_for_file: unnecessary_lambdas
+import 'loading_helper.dart' as _i13;
+import 'utilities.dart' as _i18; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -46,5 +47,6 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.lazySingleton<_i15.Patch>(() => _i15.Patch());
   gh.lazySingleton<_i16.Post>(() => _i16.Post());
   gh.lazySingleton<_i17.Put>(() => _i17.Put());
+  gh.lazySingleton<_i18.Utilities>(() => _i18.Utilities());
   return get;
 }

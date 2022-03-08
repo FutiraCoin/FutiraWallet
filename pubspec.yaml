@@ -70,6 +70,8 @@ dependencies:
   injectable: ^1.5.3
   firebase_analytics: ^9.1.2
   firebase_crashlytics: ^2.5.3
+  google_maps_flutter: ^2.1.2
+  geocode: ^1.0.1
 
 
 

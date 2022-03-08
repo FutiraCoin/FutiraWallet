@@ -2,23 +2,24 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:geocode/geocode.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:injectable/injectable.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import 'custom_toast.dart';
 
+@lazySingleton
 class Utilities {
-  static copyToClipBoard(String text) {
+  copyToClipBoard(String text) {
     Clipboard.setData(ClipboardData(text: text)).then((value) {
       CustomToast.showSnakeBar("Copied successfully", type: ToastType.success);
     });
   }
 
 
-  static Future<PermissionStatus> getContactsPermission() async {
+  Future<PermissionStatus> getContactsPermission() async {
     await Permission.contacts.request();
     final PermissionStatus permission = await Permission.contacts.status;
     if (permission != PermissionStatus.granted &&
@@ -32,7 +33,7 @@ class Utilities {
   }
 
 
-  static String customizePhoneNumber(String phone, String? code) {
+  String customizePhoneNumber(String phone, String? code) {
     String phoneNumber = "";
     if (phone.startsWith("0")) {
       phoneNumber = phone.replaceFirst("0", code ?? "+20");
@@ -43,7 +44,7 @@ class Utilities {
   }
 
 
-  static Future<File?> getImageFile(BuildContext context) async {
+  Future<File?> getImageFile(BuildContext context) async {
     FocusScope.of(context).requestFocus(FocusNode());
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.image,
@@ -56,7 +57,7 @@ class Utilities {
     return null;
   }
 
-  static Future<File?> getAttachmentFile(FileType fileType) async {
+  Future<File?> getAttachmentFile(FileType fileType) async {
     if(fileType == FileType.any){
       return await getAPdfFile();
     }
@@ -71,7 +72,7 @@ class Utilities {
     return null;
   }
 
-  static Future<File?> getAPdfFile() async {
+  Future<File?> getAPdfFile() async {
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
       allowMultiple: false,
@@ -85,7 +86,7 @@ class Utilities {
   }
 
   /// used to get the current store path
-  static Future<String> getFilePath() async {
+  Future<String> getFilePath() async {
     String _sdPath = "";
     // if (Platform.isIOS) {
     //   Directory tempDir = await getTemporaryDirectory();
@@ -103,7 +104,20 @@ class Utilities {
     return storagePath;
   }
 
-  static String convertDigitsToLatin(String s) {
+  Future<String> getAddress(LatLng latLng, BuildContext context) async {
+    GeoCode geoCode = GeoCode();
+
+    try {
+      var address = await geoCode.reverseGeocoding(latitude: latLng.latitude, longitude: latLng.longitude);
+      var data = "${address.countryName??""}  ${address.city??""}  ${address.region??""}  ${address.streetAddress??""}";
+      print(data);
+      return data;
+    } catch (e) {
+      return "";
+    }
+  }
+
+  String convertDigitsToLatin(String s) {
     var sb = StringBuffer();
     for (int i = 0; i < s.length; i++) {
       switch (s[i]) {
