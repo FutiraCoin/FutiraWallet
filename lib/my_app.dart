@@ -5,7 +5,6 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:injectable/injectable.dart';
-
 import 'core/bloc/lang_cubit/lang_cubit.dart';
 import 'core/helpers/app_them.dart';
 import 'core/helpers/firebase_analytics_helper.dart';
