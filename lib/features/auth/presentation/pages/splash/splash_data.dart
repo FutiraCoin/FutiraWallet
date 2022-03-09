@@ -6,7 +6,7 @@ class SplashData {
     getIt<GlobalNotification>().setupNotification(context);
     SharedPreferences preferences = await SharedPreferences.getInstance();
     var userStr = preferences.getString("user");
-    AutoRouter.of(context).push(const SelectLanguageRoute());
+    AutoRouter.of(context).push(const RepeatedQuestionsRoute());
   }
 
 }

@@ -29,7 +29,7 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: MyText(
         title: title,
-        size: 16,
+        size: 18,
         color: MyColors.black,
         fontWeight: FontWeight.w500,
       ),
