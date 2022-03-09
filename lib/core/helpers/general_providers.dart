@@ -4,6 +4,8 @@ import 'package:flutter_tdd/core/bloc/lang_cubit/lang_cubit.dart';
 import 'package:flutter_tdd/features/auth/presentation/manager/auth_cubit/auth_cubit.dart';
 import 'package:flutter_tdd/features/auth/presentation/manager/user_cubit/user_cubit.dart';
 
+import '../../features/general/presentation/pages/location_address/location_cubit/location_cubit.dart';
+
 class GeneralProviders{
 
   GeneralProviders._();
@@ -19,6 +21,9 @@ class GeneralProviders{
     ),
     BlocProvider<UserCubit>(
       create: (BuildContext context)=> UserCubit(),
+    ),
+    BlocProvider<LocationCubit>(
+      create: (BuildContext context)=> LocationCubit(),
     ),
   ];
 

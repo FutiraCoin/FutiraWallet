@@ -15,6 +15,8 @@ part of 'router_imports.dart';
     AdaptiveRoute(page: Terms),
     AdaptiveRoute(page: RepeatedQuestions),
     AdaptiveRoute(page: LocationAddress),
+    AutoRoute(page: Home,children: [baseRoute]),
+
   ],
 )
 class $AppRouter {}

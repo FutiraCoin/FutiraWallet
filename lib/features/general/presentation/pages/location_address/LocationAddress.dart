@@ -27,7 +27,7 @@ class _LocationAddress extends State<LocationAddress> {
         title: BlocBuilder<LocationCubit,LocationState>(
           builder: (context,state){
             return MyText(
-              title: "${state.model!.address}",
+              title: state.model!.address,
               size: 12,
               color: MyColors.black,
             );

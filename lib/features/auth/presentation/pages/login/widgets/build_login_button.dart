@@ -15,7 +15,7 @@ class BuildLoginButton extends StatelessWidget {
           absorbing: isEmpty,
           child: LoadingButton(
               title: "Login",
-              onTap: () {},
+              onTap: () => AutoRouter.of(context).push(HomeRoute()),
               color: isEmpty? MyColors.offWhite:MyColors.primary,
               textColor: isEmpty? MyColors.black:MyColors.white,
               btnKey: loginData.btnKey,
