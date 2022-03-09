@@ -460,7 +460,7 @@ packages:
       name: flutter_local_notifications
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "9.3.3"
+    version: "9.4.0"
   flutter_local_notifications_linux:
     dependency: transitive
     description:
@@ -699,7 +699,7 @@ packages:
       name: json_serializable
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.1.4"
+    version: "6.1.5"
   liquid_pull_to_refresh:
     dependency: transitive
     description:

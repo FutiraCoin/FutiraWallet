@@ -12,6 +12,10 @@ class _SelectLanguageState extends State<SelectLanguage> {
 
   @override
   void initState() {
+    getCountries(context).then((value) {
+      var defaultCountry = value.firstWhere((element) => element.callingCode=="+971");
+      languageData.countryCubit.onUpdateData(defaultCountry);
+    });
     super.initState();
   }
 
@@ -21,10 +25,12 @@ class _SelectLanguageState extends State<SelectLanguage> {
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 15,vertical: 20),
         children: [
+          BuildIntroHeader(),
           BuildHeaderTitle(
             title: "Select Language",
             subTitle: "Your data appearance depend on selecting your country and language.",
           ),
+          SelectCountryField(languageData: languageData),
           BuildLanguagesView(languageData: languageData)
         ],
       ),

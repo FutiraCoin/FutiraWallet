@@ -38,7 +38,7 @@ dependencies:
   tf_custom_widgets: ^1.1.17
   flutter_bloc: ^8.0.1
   equatable: ^2.0.3
-  json_serializable: ^6.1.4
+  json_serializable: ^6.1.5
   json_annotation: ^4.4.0
   freezed: ^1.1.1
   freezed_annotation: ^1.1.0
@@ -52,7 +52,7 @@ dependencies:
   flutter_spinkit: ^5.1.0
   firebase_messaging: ^11.2.8
   firebase_core: ^1.13.1
-  flutter_local_notifications: ^9.3.3
+  flutter_local_notifications: ^9.4.0
   flutter_phoenix: ^1.0.0
   animations: ^2.0.2
   google_fonts: ^2.3.1
@@ -62,7 +62,7 @@ dependencies:
   path_provider: ^2.0.9
   permission_handler: ^9.2.0
   file_picker: ^4.5.0
-  flutter_svg: ^1.0.2
+  flutter_svg: ^1.0.3
   smooth_page_indicator: ^1.0.0+2
   country_calling_code_picker: ^2.0.0
   flutter_slidable: ^1.2.0

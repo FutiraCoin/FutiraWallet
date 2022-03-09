@@ -17,7 +17,7 @@ class BuildLanguageFiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
+      height: 55,
       padding: EdgeInsets.symmetric(horizontal: 10),
       margin: EdgeInsets.only(top: 15),
       decoration: BoxDecoration(
@@ -33,7 +33,7 @@ class BuildLanguageFiled extends StatelessWidget {
             value: locale,
             groupValue: selected,
             activeColor: MyColors.primary,
-            onChanged: (value) {},
+            onChanged: (value) => langCubit.onUpdateData(value!),
           ),
         ],
       ),
