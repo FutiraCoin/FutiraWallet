@@ -10,6 +10,7 @@ import 'package:flutter_tdd/features/auth/presentation/pages/verify_code/verify_
 import 'package:flutter_tdd/features/general/presentation/pages/location_address/LocationAddressImports.dart';
 import 'package:flutter_tdd/features/general/presentation/pages/repeated_questions/repeated_questions_imports.dart';
 
+import '../../features/auth/presentation/pages/select_language/select_language_imports.dart';
 import '../../features/general/presentation/pages/terms/terms_imports.dart';
 
 

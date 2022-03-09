@@ -21,6 +21,9 @@
         android:label="flutter_tdd"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
+       <meta-data
+           android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyDV1H2CcIYVHXtndUp8w_tu79A5OgLoAFU" />
        <receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver">
            <intent-filter>
                <action android:name="android.intent.action.BOOT_COMPLETED" />
