@@ -9,9 +9,9 @@ import 'package:injectable/injectable.dart' as _i2;
 
 import '../http/dio_helper/actions/delete.dart' as _i3;
 import '../http/dio_helper/actions/get.dart' as _i8;
-import '../http/dio_helper/actions/patch.dart' as _i15;
-import '../http/dio_helper/actions/post.dart' as _i16;
-import '../http/dio_helper/actions/put.dart' as _i17;
+import '../http/dio_helper/actions/patch.dart' as _i16;
+import '../http/dio_helper/actions/post.dart' as _i17;
+import '../http/dio_helper/actions/put.dart' as _i18;
 import '../http/dio_helper/utils/dio_header.dart' as _i4;
 import '../http/dio_helper/utils/dio_options.dart' as _i5;
 import '../http/dio_helper/utils/handle_errors.dart' as _i10;
@@ -22,7 +22,8 @@ import '../network/network_info.dart' as _i14;
 import 'firebase_analytics_helper.dart' as _i6;
 import 'global_notification.dart' as _i9;
 import 'loading_helper.dart' as _i13;
-import 'utilities.dart' as _i18; // ignore_for_file: unnecessary_lambdas
+import 'new_version_helper.dart' as _i15;
+import 'utilities.dart' as _i19; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -44,9 +45,10 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.lazySingleton<_i12.HandleRequestBody>(() => _i12.HandleRequestBody());
   gh.lazySingleton<_i13.LoadingHelper>(() => _i13.LoadingHelper());
   gh.lazySingleton<_i14.NetworkInfoImpl>(() => _i14.NetworkInfoImpl());
-  gh.lazySingleton<_i15.Patch>(() => _i15.Patch());
-  gh.lazySingleton<_i16.Post>(() => _i16.Post());
-  gh.lazySingleton<_i17.Put>(() => _i17.Put());
-  gh.lazySingleton<_i18.Utilities>(() => _i18.Utilities());
+  gh.lazySingleton<_i15.NewVersionHelper>(() => _i15.NewVersionHelper());
+  gh.lazySingleton<_i16.Patch>(() => _i16.Patch());
+  gh.lazySingleton<_i17.Post>(() => _i17.Post());
+  gh.lazySingleton<_i18.Put>(() => _i18.Put());
+  gh.lazySingleton<_i19.Utilities>(() => _i19.Utilities());
   return get;
 }

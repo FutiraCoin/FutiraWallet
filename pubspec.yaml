@@ -73,6 +73,7 @@ dependencies:
   google_maps_flutter: ^2.1.2
   geocode: ^1.0.1
   animated_bottom_navigation_bar: ^0.3.2
+  new_version: ^0.3.0
 
 
 
