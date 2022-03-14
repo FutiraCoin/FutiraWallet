@@ -23,7 +23,8 @@ import 'firebase_analytics_helper.dart' as _i6;
 import 'global_notification.dart' as _i9;
 import 'loading_helper.dart' as _i13;
 import 'new_version_helper.dart' as _i15;
-import 'utilities.dart' as _i19; // ignore_for_file: unnecessary_lambdas
+import 'rate_app_helper.dart' as _i19;
+import 'utilities.dart' as _i20; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -49,6 +50,7 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.lazySingleton<_i16.Patch>(() => _i16.Patch());
   gh.lazySingleton<_i17.Post>(() => _i17.Post());
   gh.lazySingleton<_i18.Put>(() => _i18.Put());
-  gh.lazySingleton<_i19.Utilities>(() => _i19.Utilities());
+  gh.lazySingleton<_i19.RateAppHelper>(() => _i19.RateAppHelper());
+  gh.lazySingleton<_i20.Utilities>(() => _i20.Utilities());
   return get;
 }

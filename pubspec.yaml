@@ -74,6 +74,7 @@ dependencies:
   geocode: ^1.0.1
   animated_bottom_navigation_bar: ^0.3.2
   new_version: ^0.3.0
+  rate_my_app: ^1.1.2
 
 
 
