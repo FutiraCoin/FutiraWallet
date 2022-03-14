@@ -10,11 +10,13 @@ class RegisterData{
  final GenericBloc<bool> codeCubit = GenericBloc(false);
  final GenericBloc<bool> termsCubit = GenericBloc(false);
 
-  TextEditingController name = TextEditingController();
+  TextEditingController nikeName = TextEditingController();
+  TextEditingController fullName = TextEditingController();
+  TextEditingController email = TextEditingController();
   TextEditingController phone = TextEditingController();
   TextEditingController password = TextEditingController();
 
-   GenericBloc<RegisterParams> registerBloc =GenericBloc(RegisterParams(name: '',phone: "",password: "",code: "z"));
+   GenericBloc<RegisterParams> registerBloc =GenericBloc(RegisterParams(code: "z"));
 
   goNext(){
     pageController.nextPage(duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
@@ -23,8 +25,18 @@ class RegisterData{
     pageController.previousPage(duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
   }
 
- onChangeName(String value){
-  registerBloc.state.data.name = value;
+ onChangeNikeName(String value){
+  registerBloc.state.data.nikeName = value;
+  registerBloc.onUpdateData(registerBloc.state.data);
+ }
+
+ onChangeFullName(String value){
+  registerBloc.state.data.fullName = value;
+  registerBloc.onUpdateData(registerBloc.state.data);
+ }
+
+ onChangeEmail(String value){
+  registerBloc.state.data.email = value;
   registerBloc.onUpdateData(registerBloc.state.data);
  }
 

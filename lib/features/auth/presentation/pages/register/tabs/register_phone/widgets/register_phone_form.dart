@@ -15,17 +15,17 @@ class RegisterPhoneForm extends StatelessWidget {
             MyText(title: "Let's setup your account", color: MyColors.black, size: 18),
             GenericTextField(
               fieldTypes: FieldTypes.normal,
-              type: TextInputType.phone,
+              type: TextInputType.text,
               action: TextInputAction.next,
-              controller: registerData.phone,
-              validate: (value) => value?.validatePhone(context),
-              label: "Mobile Number",
+              controller: registerData.fullName,
+              validate: (value) => value?.validateEmpty(context),
+              label: "Full Name",
               margin: EdgeInsets.only(top: 20),
               prefixIcon: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: SvgPicture.asset(Res.mobile),
               ),
-               onChange: registerData.onChangePhone,
+               onChange: registerData.onChangeFullName,
             ),
             GenericTextField(
               fieldTypes: FieldTypes.password,

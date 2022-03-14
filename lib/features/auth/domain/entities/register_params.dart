@@ -1,8 +1,16 @@
-class RegisterParams{
-  String name;
+class RegisterParams {
+  String fullName;
+  String email;
+  String nikeName;
   String phone;
   String password;
   String code;
 
-  RegisterParams({required this.name,required this.phone,required this.password,required this.code});
+  RegisterParams(
+      { this.fullName = "",
+       this.phone = "",
+       this.email = "",
+       this.nikeName = "",
+       this.password = "",
+       this.code = ""});
 }

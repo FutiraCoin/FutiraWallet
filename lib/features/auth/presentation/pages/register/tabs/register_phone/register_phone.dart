@@ -12,7 +12,7 @@ class RegisterPhone extends StatefulWidget {
 class _RegisterPhoneState extends State<RegisterPhone> {
   @override
   Widget build(BuildContext context) {
-    final name = widget.registerData.name.text.split(" ").first;
+    final name = widget.registerData.nikeName.text.split(" ").first;
     return Scaffold(
       appBar: BuildAuthAppBar(
         title: "Hello, $name",
