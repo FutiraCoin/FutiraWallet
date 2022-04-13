@@ -32,7 +32,7 @@ class GenericHttpImpl<T> extends GenericHttp<T> {
       body: model.requestBody ?? {},
     );
     final connected = await getIt<NetworkInfoImpl>().isConnected;
-    if (connected) {
+    if (!connected) {
       return Left(NetWorkFailure());
     }
     Either<ServerFailure, Response> response;
