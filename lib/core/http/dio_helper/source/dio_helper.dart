@@ -3,16 +3,19 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
 import '../../../errors/failures.dart';
+import '../../../helpers/di.dart';
 import '../../generic_http/api_names.dart';
 import '../../models/request_body_model.dart';
 import '../utils/cache_manager.dart';
+import '../utils/dio_header.dart';
 
 abstract class DioHelper {
   Dio get dio =>
       Dio(
         BaseOptions(
             baseUrl: ApiNames.baseUrl,
-            contentType: "application/x-www-form-urlencoded; charset=utf-8"),
+          headers: getIt<DioHeader>().call(),
+        ),
       )
         ..interceptors.add(CacheManager()().interceptor)
         ..interceptors.add(LogInterceptor(

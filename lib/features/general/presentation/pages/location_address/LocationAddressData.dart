@@ -28,7 +28,7 @@ class LocationAddressData {
 
   void changeLocation(BuildContext context) async {
     if (locationModel.address.isEmpty) {
-      CustomToast.showSimpleToast(msg: tr(context,"selectLocationOnMap"));
+      CustomToast.showSimpleToast(msg: tr("selectLocationOnMap"));
       return;
     }
     context.read<LocationCubit>().onLocationUpdated(locationModel);

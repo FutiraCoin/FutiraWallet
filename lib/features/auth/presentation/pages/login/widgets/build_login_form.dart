@@ -15,7 +15,7 @@ class BuildLoginForm extends StatelessWidget {
             fieldTypes: FieldTypes.normal,
             type: TextInputType.phone,
             action: TextInputAction.next,
-            validate: (value) => value?.validatePhone(context),
+            validate: (value) => value?.validatePhone(),
             label: "Phone Number",
             margin: EdgeInsets.only(top: 20),
             prefixIcon: Padding(
@@ -28,7 +28,7 @@ class BuildLoginForm extends StatelessWidget {
             fieldTypes: FieldTypes.password,
             type: TextInputType.text,
             action: TextInputAction.done,
-            validate: (value) => value?.validatePhone(context),
+            validate: (value) => value?.validatePhone(),
             label: "Password",
             margin: EdgeInsets.only(top: 20),
             prefixIcon: Padding(

@@ -13,7 +13,7 @@ class ResetPasswordForm extends StatelessWidget {
           type: TextInputType.text,
           action: TextInputAction.next,
           controller: resetPasswordData.password,
-          validate: (value) => value?.validatePassword(context),
+          validate: (value) => value?.validatePassword(),
           label: "New password",
           prefixIcon: Padding(
             padding: const EdgeInsets.all(12.0),
@@ -25,7 +25,7 @@ class ResetPasswordForm extends StatelessWidget {
           fieldTypes: FieldTypes.password,
           type: TextInputType.text,
           action: TextInputAction.done,
-          validate: (value) => value?.validatePasswordConfirm(context,pass: resetPasswordData.password.text),
+          validate: (value) => value?.validatePasswordConfirm(pass: resetPasswordData.password.text),
           label: "Repeat new password",
           margin: EdgeInsets.only(top: 20),
           controller: resetPasswordData.confirmPassword,

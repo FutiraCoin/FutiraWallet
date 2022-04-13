@@ -22,7 +22,7 @@ class BuildSaveButton extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30)),
             alignment: Alignment.center,
             child: MyText(
-              title: tr(context,'saveLocation'),
+              title: tr('saveLocation'),
               size: 12,
               color: MyColors.white,
             ),

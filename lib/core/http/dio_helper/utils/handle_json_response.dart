@@ -8,9 +8,9 @@ import '../../../errors/failures.dart';
 import '../../models/http_request_model.dart';
 
 @lazySingleton
-class HandleJsonResponse<T> {
+class HandleJsonResponse<BaseModel> {
 
-  Future<Either<ServerFailure, T>> call(
+  Future<Either<ServerFailure, BaseModel>> call(
       Either<ServerFailure, Response> response,
       ResType responseType,
       _ToJsonFunc toJsonFunc,

@@ -12,7 +12,7 @@ class BuildForgetForm extends StatelessWidget {
         fieldTypes: FieldTypes.normal,
         type: TextInputType.phone,
         action: TextInputAction.next,
-        validate: (value) => value?.validatePhone(context),
+        validate: (value) => value?.validatePhone(),
         label: "Phone Number",
         prefixIcon: Padding(
           padding: const EdgeInsets.all(12.0),

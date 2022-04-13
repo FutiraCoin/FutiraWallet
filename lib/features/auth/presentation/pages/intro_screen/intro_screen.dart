@@ -36,7 +36,7 @@ class _IntroScreenState extends State<IntroScreen> {
           BuildSocialRegisterButton(
             title: "Continue with Mobile Number",
             icon: Res.mobile,
-            onTap: () => AutoRouter.of(context).push(RegisterRoute()),
+            onTap: () => AutoRouter.of(getIt<GlobalContext>().context()).push(RegisterRoute()),
           ),
           BuildLoginNavigation()
         ],

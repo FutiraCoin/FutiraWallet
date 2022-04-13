@@ -17,7 +17,6 @@ class Patch extends DioHelper{
   Future<Either<ServerFailure,Response>> call(
       RequestBodyModel params) async {
     if (params.showLoader) getIt<LoadingHelper>().showLoadingDialog();
-    dio.options.headers = getIt<DioHeader>().call();
     try {
       var response = await dio.patch(params.url, data: params.body);
       if (params.showLoader) getIt<LoadingHelper>().dismissDialog();

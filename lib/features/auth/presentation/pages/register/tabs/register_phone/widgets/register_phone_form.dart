@@ -18,7 +18,7 @@ class RegisterPhoneForm extends StatelessWidget {
               type: TextInputType.text,
               action: TextInputAction.next,
               controller: registerData.fullName,
-              validate: (value) => value?.validateEmpty(context),
+              validate: (value) => value?.validateEmpty(),
               label: "Full Name",
               margin: EdgeInsets.only(top: 20),
               prefixIcon: Padding(
@@ -31,7 +31,7 @@ class RegisterPhoneForm extends StatelessWidget {
               fieldTypes: FieldTypes.password,
               type: TextInputType.text,
               action: TextInputAction.done,
-              validate: (value) => value?.validatePassword(context),
+              validate: (value) => value?.validatePassword(),
               label: "Password",
               controller: registerData.password,
               margin: EdgeInsets.only(top: 20),

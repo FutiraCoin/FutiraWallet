@@ -19,7 +19,7 @@ class RegisterNameBody extends StatelessWidget {
               type: TextInputType.name,
               action: TextInputAction.next,
               controller: registerData.nikeName,
-              validate: (value) => value?.validateEmpty(context),
+              validate: (value) => value?.validateEmpty(),
               label: "Nik name",
               margin: EdgeInsets.only(top: 20),
               prefixIcon: Padding(
@@ -33,7 +33,7 @@ class RegisterNameBody extends StatelessWidget {
               type: TextInputType.emailAddress,
               action: TextInputAction.next,
               controller: registerData.email,
-              validate: (value) => value?.validateEmail(context),
+              validate: (value) => value?.validateEmail(),
               label: "Email",
               margin: EdgeInsets.only(top: 20),
               prefixIcon: Padding(
@@ -47,7 +47,7 @@ class RegisterNameBody extends StatelessWidget {
               type: TextInputType.phone,
               action: TextInputAction.next,
               controller: registerData.phone,
-              validate: (value) => value?.validatePhone(context),
+              validate: (value) => value?.validatePhone(),
               label: "Phone",
               margin: EdgeInsets.only(top: 20),
               prefixIcon: Padding(

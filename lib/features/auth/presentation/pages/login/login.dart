@@ -11,11 +11,6 @@ class _LoginState extends State<Login> {
   final LoginData loginData = LoginData();
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.white,
