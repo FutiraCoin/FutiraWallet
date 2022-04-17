@@ -21,11 +21,13 @@ class InitCustomPackages{
               String? hint,
               Widget? prefixIcon,
               Widget? suffixIcon,
+              Widget? suffixWidget,
+              Widget? prefixWidget,
               Color? hintColor,
               Color? fillColor,
-              EdgeInsets? padding,
               BorderRadius? radius,
               Color? focusBorderColor,
+              EdgeInsets? padding,
               Color? enableColor}) =>
             CustomInputDecoration(
                 lang: language,
@@ -33,6 +35,7 @@ class InitCustomPackages{
                 hint: hint,
                 prefIcon: prefixIcon,
                 sufIcon: suffixIcon,
+                hintColor: hintColor,
                 enableColor: enableColor,
                 customFillColor: fillColor,
                 borderRadius: radius,

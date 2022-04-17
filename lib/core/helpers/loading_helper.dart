@@ -1,13 +1,16 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_tdd/core/constants/my_colors.dart';
 import 'package:injectable/injectable.dart';
 
+import 'di.dart';
+import 'global_context.dart';
+
 @lazySingleton
 class LoadingHelper {
-
-   void showLoadingDialog() {
+  void showLoadingDialog() {
     EasyLoading.show(
         maskType: EasyLoadingMaskType.black,
         dismissOnTap: false,
@@ -28,6 +31,16 @@ class LoadingHelper {
         status: "loading");
   }
 
+  showInvalidSession() {
+    BuildContext context = getIt<GlobalContext>().context();
+    showModal(
+      context: context,
+      builder: (con){
+        return AlertDialog();
+      },
+    );
+  }
+
   showLoadingView({Color? color}) {
     return Center(
       child: SpinKitFoldingCube(
@@ -46,8 +59,7 @@ class LoadingHelper {
     );
   }
 
-  void dismissDialog(){
+  void dismissDialog() {
     EasyLoading.dismiss();
   }
-
 }

@@ -35,5 +35,8 @@ class ApiNames{
   static const String FEATURED_ITEMS = ITEMS+"/Featured";
 
 
+  static const String REFRESH_TOKEN = "RefreshToken";
+
+
 
 }

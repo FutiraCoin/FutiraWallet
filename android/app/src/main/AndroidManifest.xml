@@ -19,6 +19,7 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
    <application
         android:label="flutter_tdd"
+        android:usesCleartextTraffic="true"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
        <meta-data
@@ -30,7 +31,14 @@
            </intent-filter>
        </receiver>
        <receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"/>
-
+       <activity android:name="com.linusu.flutter_web_auth.CallbackActivity" android:exported="true">
+           <intent-filter android:label="flutter_web_auth">
+               <action android:name="android.intent.action.VIEW" />
+               <category android:name="android.intent.category.DEFAULT" />
+               <category android:name="android.intent.category.BROWSABLE" />
+               <data android:scheme="dev.saeed.projects.roaa.tech" />
+           </intent-filter>
+       </activity>
        <activity
             android:name=".MainActivity"
             android:exported="true"

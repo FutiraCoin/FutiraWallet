@@ -10,12 +10,13 @@ class BuildLoginButton extends StatelessWidget {
     return BlocBuilder<GenericBloc<LoginParams>, GenericState<LoginParams>>(
       bloc: loginData.loginCubit,
       builder: (context, state) {
-        bool isEmpty = state.data.phone.isEmpty || state.data.pass.isEmpty;
+        bool isEmpty = false;
         return AbsorbPointer(
           absorbing: isEmpty,
           child: LoadingButton(
               title: "Login",
-              onTap: () => AutoRouter.of(context).push(HomeRoute()),
+              onTap: ()=> loginData.openIdLogin(),
+              // onTap: () => AutoRouter.of(context).push(HomeRoute()),
               color: isEmpty? MyColors.offWhite:MyColors.primary,
               textColor: isEmpty? MyColors.black:MyColors.white,
               btnKey: loginData.btnKey,

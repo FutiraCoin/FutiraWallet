@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter_tdd/core/http/dio_helper/utils/auth_interceptor.dart';
 
 import '../../../errors/failures.dart';
 import '../../../helpers/di.dart';
@@ -18,6 +19,7 @@ abstract class DioHelper {
         ),
       )
         ..interceptors.add(CacheManager()().interceptor)
+        // ..interceptors.add(AuthInterceptor())
         ..interceptors.add(LogInterceptor(
           responseBody: true,
           requestBody: true,
