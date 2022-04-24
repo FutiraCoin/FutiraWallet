@@ -1,17 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="du.base.clean">
-<!--    <queries>-->
-<!--        <intent>-->
-<!--            <action android:name="android.intent.action.VIEW" />-->
-<!--            <category android:name="android.intent.category.BROWSABLE" />-->
-<!--            <data android:scheme="https" android:host="osos.roaa.tech"/>-->
-<!--        </intent>-->
-<!--        <intent>-->
-<!--            <action android:name="android.intent.action.VIEW" />-->
-<!--            <category android:name="android.intent.category.APP_BROWSER" />-->
-<!--            <data android:scheme="https" android:host="osos.roaa.tech"/>-->
-<!--        </intent>-->
-<!--    </queries>-->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -57,15 +45,6 @@
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               />
-           <meta-data android:name="flutter_deeplinking_enabled" android:value="true" />
-           <intent-filter android:autoVerify="true">
-               <action android:name="android.intent.action.VIEW" />
-               <category android:name="android.intent.category.DEFAULT" />
-               <category android:name="android.intent.category.BROWSABLE" />
-               <data android:scheme="https" android:host="osos.roaa.tech" />
-               <data android:scheme="http" />
-               <data android:scheme="scheme" />
-           </intent-filter>
            <intent-filter>
                <action android:name="android.intent.action.MAIN" />
                <category android:name="android.intent.category.LAUNCHER" />

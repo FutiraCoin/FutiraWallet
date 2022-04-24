@@ -18,16 +18,30 @@ class _LoginState extends State<Login> {
       body: GestureDetector(
         onTap: FocusScope.of(context).unfocus,
         child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 15,vertical: 20),
+          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
           children: [
-            MyText(title: "Welcome back", color: MyColors.black, size: 22,),
+            MyText(
+              title: "Welcome back",
+              color: MyColors.black,
+              size: 22,
+            ),
             SizedBox(height: 20),
-            BuildLoginForm(loginData: loginData),
+            BlocBuilder<GenericBloc<LoginParams>, GenericState<LoginParams>>(
+              bloc: loginData.loginCubit,
+              builder: (context, state) {
+                return Visibility(
+                  child: loginData.identity == null
+                      ? Container()
+                      : IdentityView(loginData.identity!),
+                  visible: loginData.identity != null,
+                  replacement: BuildLoginForm(loginData: loginData),
+                );
+              },
+            ),
             BuildLoginButton(loginData: loginData),
             BuildForgetPasswordView(),
             Divider(height: 30),
             BuildLoginSocialMedia(loginData: loginData),
-
           ],
         ),
       ),
