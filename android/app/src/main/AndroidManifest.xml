@@ -1,5 +1,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="du.base.clean">
+<!--    <queries>-->
+<!--        <intent>-->
+<!--            <action android:name="android.intent.action.VIEW" />-->
+<!--            <category android:name="android.intent.category.BROWSABLE" />-->
+<!--            <data android:scheme="https" android:host="osos.roaa.tech"/>-->
+<!--        </intent>-->
+<!--        <intent>-->
+<!--            <action android:name="android.intent.action.VIEW" />-->
+<!--            <category android:name="android.intent.category.APP_BROWSER" />-->
+<!--            <data android:scheme="https" android:host="osos.roaa.tech"/>-->
+<!--        </intent>-->
+<!--    </queries>-->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -12,7 +24,6 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
     <uses-feature android:name="android.hardware.camera" />
@@ -30,15 +41,6 @@
                <action android:name="android.intent.action.BOOT_COMPLETED" />
            </intent-filter>
        </receiver>
-       <receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"/>
-       <activity android:name="com.linusu.flutter_web_auth.CallbackActivity" android:exported="true">
-           <intent-filter android:label="flutter_web_auth">
-               <action android:name="android.intent.action.VIEW" />
-               <category android:name="android.intent.category.DEFAULT" />
-               <category android:name="android.intent.category.BROWSABLE" />
-               <data android:scheme="dev.saeed.projects.roaa.tech" />
-           </intent-filter>
-       </activity>
        <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -55,6 +57,15 @@
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               />
+           <meta-data android:name="flutter_deeplinking_enabled" android:value="true" />
+           <intent-filter android:autoVerify="true">
+               <action android:name="android.intent.action.VIEW" />
+               <category android:name="android.intent.category.DEFAULT" />
+               <category android:name="android.intent.category.BROWSABLE" />
+               <data android:scheme="https" android:host="osos.roaa.tech" />
+               <data android:scheme="http" />
+               <data android:scheme="scheme" />
+           </intent-filter>
            <intent-filter>
                <action android:name="android.intent.action.MAIN" />
                <category android:name="android.intent.category.LAUNCHER" />

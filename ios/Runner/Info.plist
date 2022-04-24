@@ -78,16 +78,16 @@
 	<false/>
 	<key>com.apple.security.network.client</key>
 	<true/>
-	  <key>CFBundleURLTypes</key>
-       <array>
-          <dict>
-             <key>CFBundleTypeRole</key>
-             <string>Editor</string>
-             <key>CFBundleURLSchemes</key>
-             <array>
-                <string>dev.saeed.projects.roaa.tech</string>
-             </array>
-          </dict>
-       </array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>io.identityserver.roaa</string>
+            </array>
+        </dict>
+    </array>
 </dict>
 </plist>

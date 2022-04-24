@@ -17,20 +17,27 @@ class LoginData {
     loginCubit.onUpdateData(loginCubit.state.data);
   }
 
- final FlutterAppAuth appAuth = FlutterAppAuth();
+  final FlutterAppAuth appAuth = FlutterAppAuth();
 
- void openIdLogin()async{
-    final AuthorizationTokenResponse? result = await appAuth.authorizeAndExchangeCode(
+  final AuthorizationServiceConfiguration _serviceConfiguration =
+      const AuthorizationServiceConfiguration(
+    authorizationEndpoint: 'https://dev.saeed.projects.roaa.tech',
+    tokenEndpoint: 'https://dev.saeed.projects.roaa.tech/token', //here
+    endSessionEndpoint: 'https://dev.saeed.projects.roaa.tech/endsession',
+  );
+
+  void openIdLogin() async {
+    final AuthorizationTokenResponse? result =
+        await appAuth.authorizeAndExchangeCode(
       AuthorizationTokenRequest(
         'osos-dev',
-        'https://dev.saeed.projects.roaa.tech/auth-callback/',
+        'https://osos.roaa.tech',
         issuer: 'https://dev.saeed.projects.roaa.tech',
         discoveryUrl: 'https://dev.saeed.projects.roaa.tech/.well-known/openid-configuration',
         scopes: ['profile', 'email', 'openid'],
       ),
     );
     print("======> ${result?.accessToken}");
-
   }
 
   void openIdClientLogin() async {
@@ -60,7 +67,7 @@ class LoginData {
     var c = await authenticator.authorize();
     closeWebView();
 
-    var token= await c.getTokenResponse();
+    var token = await c.getTokenResponse();
     print(token);
   }
 
@@ -70,12 +77,12 @@ class LoginData {
         'https://dev.saeed.projects.roaa.tech', {
       'response_type': 'code',
       'client_id': "osos-dev",
-      'redirect_uri': "https://dev.saeed.projects.roaa.tech/auth-callback",
+      'redirect_uri': "https://osos.roaa.tech",
       'scope': 'email',
     });
     final result = await FlutterWebAuth.authenticate(
       url: url.toString(),
-      callbackUrlScheme: "dev.saeed.projects.roaa.tech",
+      callbackUrlScheme: "https://osos.roaa.tech",
     );
 
     print("========> $result");
@@ -87,3 +94,5 @@ class LoginData {
 }
 
 //https://dev.saeed.projects.roaa.tech/auth?response_type=code&scope=openid&client_id=osos-dev&redirect_uri=https%3A%2F%2Fdev.saeed.projects.roaa.tech%2Fauth-callback&state=AcuGLIlj4jPn8JOSo31BatxKYKWtR7FOCN4T63ArzQCTt1TG3E
+
+// scheme://dev.osos.com

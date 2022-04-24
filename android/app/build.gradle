@@ -54,6 +54,9 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         multiDexEnabled true
+        manifestPlaceholders += [
+                'appAuthRedirectScheme': 'https://osos.roaa.tech',
+        ]
     }
 
     signingConfigs {
