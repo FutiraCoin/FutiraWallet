@@ -17,28 +17,5 @@ class LoginData {
     loginCubit.onUpdateData(loginCubit.state.data);
   }
 
-  String discoveryUrl = "https://dev.saeed.projects.roaa.tech/.well-known/openid-configuration";
-  OpenIdConfiguration? discoveryDocument;
-  AuthorizationResponse? identity;
 
-  void openIdConnectionPackage(BuildContext context)async{
-    final configuration =
-    await OpenIdConnect.getConfiguration(discoveryUrl);
-    discoveryDocument = configuration;
-    final response = await OpenIdConnect.authorizeInteractive(
-      context: context,
-      title: "Login",
-      request: await InteractiveAuthorizationRequest.create(
-        clientId: "osos-dev",
-        redirectUrl: "https://dev.saeed.projects.roaa.tech/auth-callback/",
-        scopes: [ "openid", "profile", "email", "offline_access"],
-        configuration: discoveryDocument!,
-        autoRefresh: true,
-      ),
-    );
-    print("=========> ${response?.additionalProperties}");
-    identity = response;
-    loginCubit.onUpdateData(LoginParams(phone: "", pass: ""));
-
-  }
 }

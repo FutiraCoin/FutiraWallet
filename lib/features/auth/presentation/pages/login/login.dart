@@ -26,18 +26,7 @@ class _LoginState extends State<Login> {
               size: 22,
             ),
             SizedBox(height: 20),
-            BlocBuilder<GenericBloc<LoginParams>, GenericState<LoginParams>>(
-              bloc: loginData.loginCubit,
-              builder: (context, state) {
-                return Visibility(
-                  child: loginData.identity == null
-                      ? Container()
-                      : IdentityView(loginData.identity!),
-                  visible: loginData.identity != null,
-                  replacement: BuildLoginForm(loginData: loginData),
-                );
-              },
-            ),
+            BuildLoginForm(loginData: loginData),
             BuildLoginButton(loginData: loginData),
             BuildForgetPasswordView(),
             Divider(height: 30),
