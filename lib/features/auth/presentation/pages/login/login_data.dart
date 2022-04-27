@@ -31,12 +31,12 @@ class LoginData {
       request: await InteractiveAuthorizationRequest.create(
         clientId: "osos-dev",
         redirectUrl: "https://dev.saeed.projects.roaa.tech/auth-callback/",
-        scopes: ['profile', 'email', 'openid'],
+        scopes: [ "openid", "profile", "email", "offline_access"],
         configuration: discoveryDocument!,
-        autoRefresh: false,
-        useWebPopup: false,
+        autoRefresh: true,
       ),
     );
+    print("=========> ${response?.additionalProperties}");
     identity = response;
     loginCubit.onUpdateData(LoginParams(phone: "", pass: ""));
 
