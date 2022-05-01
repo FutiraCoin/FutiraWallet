@@ -11,7 +11,7 @@ class BuildBottomNavigationBar extends StatelessWidget {
       bloc: homeData.homeTabCubit,
       builder: (context, state) {
         return AnimatedBottomNavigationBar.builder(
-          itemCount: 3,
+          itemCount: 4,
           tabBuilder: (int index, bool isActive) {
             return BuildTabIcon(
               index: index,

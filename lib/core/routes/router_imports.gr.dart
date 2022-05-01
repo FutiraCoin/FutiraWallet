@@ -11,11 +11,13 @@
 // ignore_for_file: type=lint
 
 import 'package:auto_route/auto_route.dart' as _i16;
-import 'package:flutter/material.dart' as _i18;
+import 'package:flutter/material.dart' as _i17;
 import 'package:flutter_tdd/features/auth/presentation/pages/active_account/active_account_imports.dart'
     as _i8;
 import 'package:flutter_tdd/features/auth/presentation/pages/forget_password/forget_password_imports.dart'
     as _i11;
+import 'package:flutter_tdd/features/auth/presentation/pages/geometric_screen/geometric_screen_imports.dart'
+    as _i12;
 import 'package:flutter_tdd/features/auth/presentation/pages/intro_screens/intro_screens_imports.dart'
     as _i4;
 import 'package:flutter_tdd/features/auth/presentation/pages/login/login_imports.dart'
@@ -34,19 +36,15 @@ import 'package:flutter_tdd/features/auth/presentation/pages/splash/splash_impor
     as _i1;
 import 'package:flutter_tdd/features/auth/presentation/pages/verify_code/verify_code_imports.dart'
     as _i9;
-import 'package:flutter_tdd/features/base/presentation/pages/home/home_imports.dart'
-    as _i15;
 import 'package:flutter_tdd/features/base/presentation/pages/profile/profile_imports.dart'
-    as _i17;
-import 'package:flutter_tdd/features/general/presentation/pages/location_address/LocationAddressImports.dart'
-    as _i14;
+    as _i15;
 import 'package:flutter_tdd/features/general/presentation/pages/repeated_questions/repeated_questions_imports.dart'
-    as _i13;
+    as _i14;
 import 'package:flutter_tdd/features/general/presentation/pages/terms/terms_imports.dart'
-    as _i12;
+    as _i13;
 
 class AppRouter extends _i16.RootStackRouter {
-  AppRouter([_i18.GlobalKey<_i18.NavigatorState>? navigatorKey])
+  AppRouter([_i17.GlobalKey<_i17.NavigatorState>? navigatorKey])
       : super(navigatorKey);
 
   @override
@@ -95,29 +93,21 @@ class AppRouter extends _i16.RootStackRouter {
       return _i16.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i11.ForgetPassword());
     },
+    GeometricScreenRoute.name: (routeData) {
+      return _i16.AdaptivePage<dynamic>(
+          routeData: routeData, child: const _i12.GeometricScreen());
+    },
     TermsRoute.name: (routeData) {
       return _i16.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i12.Terms());
+          routeData: routeData, child: const _i13.Terms());
     },
     RepeatedQuestionsRoute.name: (routeData) {
       return _i16.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i13.RepeatedQuestions());
-    },
-    LocationAddressRoute.name: (routeData) {
-      return _i16.AdaptivePage<dynamic>(
-          routeData: routeData, child: _i14.LocationAddress());
-    },
-    HomeRoute.name: (routeData) {
-      return _i16.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i15.Home());
-    },
-    HomePages.name: (routeData) {
-      return _i16.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i16.EmptyRouterPage());
+          routeData: routeData, child: const _i14.RepeatedQuestions());
     },
     ProfileRoute.name: (routeData) {
       return _i16.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i17.Profile());
+          routeData: routeData, child: const _i15.Profile());
     }
   };
 
@@ -134,19 +124,11 @@ class AppRouter extends _i16.RootStackRouter {
         _i16.RouteConfig(VerifyCodeRoute.name, path: '/verify-code'),
         _i16.RouteConfig(ResetPasswordRoute.name, path: '/reset-password'),
         _i16.RouteConfig(ForgetPasswordRoute.name, path: '/forget-password'),
+        _i16.RouteConfig(GeometricScreenRoute.name, path: '/geometric-screen'),
         _i16.RouteConfig(TermsRoute.name, path: '/Terms'),
         _i16.RouteConfig(RepeatedQuestionsRoute.name,
             path: '/repeated-questions'),
-        _i16.RouteConfig(LocationAddressRoute.name, path: '/location-address'),
-        _i16.RouteConfig(HomeRoute.name, path: '/Home', children: [
-          _i16.RouteConfig(HomePages.name,
-              path: 'home',
-              parent: HomeRoute.name,
-              children: [
-                _i16.RouteConfig(ProfileRoute.name,
-                    path: 'Profile', parent: HomePages.name)
-              ])
-        ])
+        _i16.RouteConfig(ProfileRoute.name, path: '/Profile')
       ];
 }
 
@@ -245,7 +227,16 @@ class ForgetPasswordRoute extends _i16.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i12.Terms]
+/// [_i12.GeometricScreen]
+class GeometricScreenRoute extends _i16.PageRouteInfo<void> {
+  const GeometricScreenRoute()
+      : super(GeometricScreenRoute.name, path: '/geometric-screen');
+
+  static const String name = 'GeometricScreenRoute';
+}
+
+/// generated route for
+/// [_i13.Terms]
 class TermsRoute extends _i16.PageRouteInfo<void> {
   const TermsRoute() : super(TermsRoute.name, path: '/Terms');
 
@@ -253,7 +244,7 @@ class TermsRoute extends _i16.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i13.RepeatedQuestions]
+/// [_i14.RepeatedQuestions]
 class RepeatedQuestionsRoute extends _i16.PageRouteInfo<void> {
   const RepeatedQuestionsRoute()
       : super(RepeatedQuestionsRoute.name, path: '/repeated-questions');
@@ -262,36 +253,9 @@ class RepeatedQuestionsRoute extends _i16.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i14.LocationAddress]
-class LocationAddressRoute extends _i16.PageRouteInfo<void> {
-  const LocationAddressRoute()
-      : super(LocationAddressRoute.name, path: '/location-address');
-
-  static const String name = 'LocationAddressRoute';
-}
-
-/// generated route for
-/// [_i15.Home]
-class HomeRoute extends _i16.PageRouteInfo<void> {
-  const HomeRoute({List<_i16.PageRouteInfo>? children})
-      : super(HomeRoute.name, path: '/Home', initialChildren: children);
-
-  static const String name = 'HomeRoute';
-}
-
-/// generated route for
-/// [_i16.EmptyRouterPage]
-class HomePages extends _i16.PageRouteInfo<void> {
-  const HomePages({List<_i16.PageRouteInfo>? children})
-      : super(HomePages.name, path: 'home', initialChildren: children);
-
-  static const String name = 'HomePages';
-}
-
-/// generated route for
-/// [_i17.Profile]
+/// [_i15.Profile]
 class ProfileRoute extends _i16.PageRouteInfo<void> {
-  const ProfileRoute() : super(ProfileRoute.name, path: 'Profile');
+  const ProfileRoute() : super(ProfileRoute.name, path: '/Profile');
 
   static const String name = 'ProfileRoute';
 }

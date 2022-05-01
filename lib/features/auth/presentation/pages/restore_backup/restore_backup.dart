@@ -40,7 +40,7 @@ class _RestoreBackupState extends State<RestoreBackup> {
           DefaultButton(
             title: "Next",
             fontSize: 12,
-            onTap: (){},
+            onTap: ()=> AutoRouter.of(context).push(GeometricScreenRoute()),
             margin: EdgeInsets.all(30),
           ),
         ],

@@ -22,8 +22,8 @@ class _SecondTabState extends State<SecondTab> {
       children: const [
         BuildIntroHeader(image: Res.welcome2,),
         BuildIntroContent(
-          title: "Quantum safe encryption",
-          subTitle: "",
+          title: "Useful",
+          subTitle: "Deposit Fut and swap to other coin with little to no fees.",
         ),
       ],
     );

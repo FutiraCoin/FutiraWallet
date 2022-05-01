@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_tdd/core/constants/my_colors.dart';
+import 'package:flutter_tdd/my_app.dart';
 import 'package:flutter_tdd/res.dart';
 import 'package:tf_custom_widgets/tf_custom_widgets.dart';
 
@@ -35,7 +36,8 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       centerTitle: centerTitle??true,
       systemOverlayStyle: const SystemUiOverlayStyle(
-        statusBarBrightness: Brightness.light
+        statusBarBrightness: Brightness.light,
+        statusBarColor: MyColors.primary
       ),
       backgroundColor: MyColors.primary,
       elevation: 0,

@@ -8,10 +8,18 @@ class HomeData {
   late Animation<double> animation;
   late CurvedAnimation curve;
 
-  List<IconData> tabs = [
-    Icons.home,
-    Icons.map_outlined,
-    Icons.face,
+  List<String> tabs = [
+    Res.home,
+    Res.discover,
+    Res.dapps,
+    Res.settings,
+  ];
+
+  List<String> tabsTxt = [
+    "Home",
+    "Discover",
+    "Dapps",
+    "Settings",
   ];
 
   void initBottomNavigation(TickerProvider ticker) {

@@ -116,13 +116,18 @@ flutter:
   assets:
     - assets/images/apple.svg
     - assets/images/arrow.svg
+    - assets/images/dapps.svg
+    - assets/images/discover.svg
     - assets/images/facebook.svg
+    - assets/images/geometric.svg
+    - assets/images/home.svg
     - assets/images/icon.png
     - assets/images/loginType_header.png
     - assets/images/logo.svg
     - assets/images/marker.png
     - assets/images/mobile.svg
     - assets/images/password.svg
+    - assets/images/settings.svg
     - assets/images/welcome1.svg
     - assets/images/welcome2.svg
     - assets/images/welcome3.svg

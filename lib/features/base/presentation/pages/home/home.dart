@@ -26,7 +26,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
           physics: NeverScrollableScrollPhysics(),
           children: [
             RepeatedQuestions(),
-            LocationAddress(),
+            Container(),
+            Container(),
             Container(),
           ],
         ),

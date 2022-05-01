@@ -21,8 +21,8 @@ class _ThirdTabState extends State<ThirdTab> {
       children: const [
         BuildIntroHeader(image: Res.welcome3,),
         BuildIntroContent(
-          title: "You can invite your contacts subject to admin approval",
-          subTitle: "",
+          title: "Smart",
+          subTitle: "Create a secure and smart coin account to access decentelized finance.",
         ),
       ],
     );

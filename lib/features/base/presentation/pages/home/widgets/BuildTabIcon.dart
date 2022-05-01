@@ -8,14 +8,16 @@ class BuildTabIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color color = active ? MyColors.primary : MyColors.grey;
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 5),
-      child: Icon(
-        homeData.tabs[index],
-        size: 30,
-        color: color,
-      ),
+    Color color = active ? MyColors.primary : MyColors.black;
+    return Column(
+      children: [
+        SizedBox(height: 4),
+        SvgPicture.asset(
+          homeData.tabs[index],
+        ),
+        SizedBox(height: 2),
+        MyText(title: homeData.tabsTxt[index] , color: color, size: 12)
+      ],
     );
   }
 }
