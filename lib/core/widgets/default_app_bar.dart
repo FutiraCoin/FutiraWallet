@@ -29,22 +29,22 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: MyText(
         title: title,
-        size: 18,
-        color: MyColors.black,
+        size: 14,
+        color: MyColors.white,
         fontWeight: FontWeight.w500,
       ),
       centerTitle: centerTitle??true,
       systemOverlayStyle: const SystemUiOverlayStyle(
         statusBarBrightness: Brightness.light
       ),
-      backgroundColor: Colors.transparent,
+      backgroundColor: MyColors.primary,
       elevation: 0,
       leadingWidth: showBack == true ? 55 : 10,
       leading: leading ??
           Visibility(
             visible: showBack ?? true,
             child: IconButton(
-              icon: SvgPicture.asset(Res.arrow),
+              icon: Icon(Icons.arrow_back, size: 25, color: MyColors.white,),
               onPressed: () => Navigator.of(context).pop(),
             ),
           ),
@@ -54,5 +54,5 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(size ?? 65);
+  Size get preferredSize => Size.fromHeight(size ?? 55);
 }

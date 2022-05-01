@@ -7,7 +7,7 @@ class SelectLanguageData {
 
 
   changeLanguageAction(BuildContext context){
-    AutoRouter.of(context).push(const IntroScreenRoute());
+    // AutoRouter.of(context).push(const IntroScreenRoute());
     context.read<LangCubit>().onUpdateLanguage(langCubit.state.data);
   }
 

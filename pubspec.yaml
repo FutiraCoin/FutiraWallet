@@ -118,10 +118,15 @@ flutter:
     - assets/images/arrow.svg
     - assets/images/facebook.svg
     - assets/images/icon.png
-    - assets/images/logo.png
+    - assets/images/loginType_header.png
+    - assets/images/logo.svg
     - assets/images/marker.png
     - assets/images/mobile.svg
     - assets/images/password.svg
+    - assets/images/welcome1.svg
+    - assets/images/welcome2.svg
+    - assets/images/welcome3.svg
+    - assets/images/welcomeHeader.svg
     - assets/lang/ar.json
     - assets/lang/en.json
   # An image asset can refer to one or more resolution-specific "variants", see

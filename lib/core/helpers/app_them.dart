@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_tdd/core/constants/my_colors.dart';
+import 'package:flutter_tdd/my_app.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppThem{
@@ -19,6 +20,7 @@ class AppThem{
         ),
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarBrightness: Brightness.light,
+        statusBarColor: MyColors.primary
       )
     ),
     textTheme: TextTheme(
