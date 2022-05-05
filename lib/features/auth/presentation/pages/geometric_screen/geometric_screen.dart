@@ -30,7 +30,6 @@ class _GeometricScreenState extends State<GeometricScreen> {
                 children: [
                   BuildGeometricHeader(),
                   BuildGeometricField(),
-
                 ],
               ),
             ),

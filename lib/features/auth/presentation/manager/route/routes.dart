@@ -13,7 +13,10 @@ import 'package:flutter_tdd/features/auth/presentation/pages/select_language/sel
 import 'package:flutter_tdd/features/auth/presentation/pages/splash/splash_imports.dart';
 import 'package:flutter_tdd/features/auth/presentation/pages/verify_code/verify_code_imports.dart';
 
+import '../../pages/confirm_recovery/confirm_recovery_imports.dart';
 import '../../pages/geometric_screen/geometric_screen_imports.dart';
+import '../../pages/recovery_phrase/recovery_phrase_imports.dart';
+import '../../pages/secure_wallet/secure_wallet_imports.dart';
 
 const List<AutoRoute> authRoutes = [
   AdaptiveRoute(page: Splash, initial: true),
@@ -28,4 +31,7 @@ const List<AutoRoute> authRoutes = [
   AdaptiveRoute(page: ResetPassword),
   AdaptiveRoute(page: ForgetPassword),
   AdaptiveRoute(page: GeometricScreen),
+  AdaptiveRoute(page: SecureWallet),
+  AdaptiveRoute(page: RecoveryPhrase),
+  AdaptiveRoute(page: ConfirmRecovery),
 ];

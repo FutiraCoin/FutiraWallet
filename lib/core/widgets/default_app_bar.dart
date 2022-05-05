@@ -29,6 +29,7 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: MyText(
+
         title: title,
         size: 14,
         color: MyColors.white,

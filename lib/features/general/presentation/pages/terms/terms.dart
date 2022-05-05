@@ -18,29 +18,41 @@ class _TermsState extends State<Terms> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: DefaultAppBar(title: ""),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            MyText(title: "Privacy Policy",size: 24, color: MyColors.black,),
-            SizedBox(height: 20),
-            Expanded(
-              child: SingleChildScrollView(
-                child: MyText(
-                  title: '''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas imperdiet consectetur tincidunt. Mauris id elit quis eros cursus aliquam. Quisque vitae est lorem. Fusce dictum nec magna in efficitur. Duis pretium placerat odio, sed eleifend tortor faucibus quis. Praesent blandit non leo at tempor. Morbi eget mattis quam. Sed dignissim mi sit amet dolor sodales elementum. Pellentesque rhoncus egestas eros vel semper. Curabitur non eleifend tellus. Sed viverra tempor est at ultricies.
-
-Fusce ultricies vehicula arcu sed mollis. Fusce molestie vitae quam pretium venenatis. Quisque quam massa, iaculis ut orci eu, finibus congue tellus. Sed et nisi vel nisi tempus feugiat sed sed turpis. Fusce interdum odio at purus efficitur euismod. Curabitur at venenatis enim. Nunc luctus augue lectus, vulputate cursus ligula mollis a. Donec hendrerit id mauris mattis convallis. Etiam rutrum aliquet tellus in iaculis.
-
-In semper quam ac metus venenatis consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam efficitur non ipsum blandit convallis. Mauris mattis pharetra nibh accumsan lobortis. Ut a consequat augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec orci bibendum, iaculis lectus vel, egestas magna. Ut sit amet tortor maximus, dictum lectus ut, varius est. Ut elit arcu, fermentum id iaculis sit amet, ullamcorper vel turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam pellentesque arcu eu erat venenatis consectetur. Vivamus scelerisque gravida erat, in consectetur dolor fermentum nec. Vivamus facilisis dui magna.''',
-                  size: 14,
-                  color: MyColors.black,
-                ),
-              ),
-            ),
-          ],
-        ),
+      appBar: DefaultAppBar(title: "Terms & Conditions"),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 5),
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10.0),
+            child: MyText(
+                title: "Overview", color: MyColors.primary, size: 10),
+          ),
+          MyText(
+            title:
+            "We know that Terms can be long and confusing, so we will do our best to keep things as clear and concise as possible. This section provides a brief summary of the highlights of this Agreement. Please note that when you accept this Agreement, you are accepting all of the terms and",
+            color: MyColors.blackOpacity,
+            size: 9,letterSpace: 1.1,),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10.0),
+            child: MyText(
+                title: "How you accept this policy", color: MyColors.primary, size: 10),
+          ),
+          MyText(
+            title:
+            "By creating or importing a locally hosted wallet (a “Wallet”), or visiting our website, you acknowledge that you have read, understood, and agreed to these Terms, as well as the accompanying [Privacy Policy](/privacy-policy) We reserve the right to change these Terms at any time. Any",
+            color: MyColors.blackOpacity,
+            size: 9,letterSpace: 1.1,),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10.0),
+            child: MyText(
+                title: "Wallet Registration and account information", color: MyColors.primary, size: 10),
+          ),
+          MyText(
+            title:
+            "You must either import or create a Wallet in order to use Futira Coin. When you create a Wallet, you will be assigned a private key. You will be prompted to download and save a keystore - your private key encrypted with a password. You will be responsible for maintaining the",
+            color: MyColors.blackOpacity,
+            size: 9,letterSpace: 1.1,),
+        ],
       ),
     );
   }
