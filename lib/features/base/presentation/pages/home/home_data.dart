@@ -23,7 +23,7 @@ class HomeData {
   ];
 
   void initBottomNavigation(TickerProvider ticker) {
-    tabController = TabController(length: 3, vsync: ticker);
+    tabController = TabController(length: 4, vsync: ticker);
   }
 
   void animateTabsPages(int index, BuildContext context) {
