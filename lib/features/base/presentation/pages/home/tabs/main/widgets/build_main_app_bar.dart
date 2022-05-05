@@ -5,43 +5,40 @@ class BuildMainAppBar extends StatelessWidget with PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.bottomCenter,
-      margin: const EdgeInsets.symmetric(horizontal: 10),
-      child: Column(
+    return AppBar(
+      title: Row(
         children: [
-          const SizedBox(height: 70,),
-          Row(
+          CachedImage(
+            url:
+            "https://thumbs.dreamstime.com/b/front-portrait-handsome-young-man-smiling-looking-camera-close-up-front-portrait-handsome-young-man-smiling-153359898.jpg",
+            height: 40,
+            width: 40,
+            haveRadius: false,
+            boxShape: BoxShape.circle,
+          ),
+          const SizedBox(
+            width: 10,
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CachedImage(
-                url:
-                    "https://thumbs.dreamstime.com/b/front-portrait-handsome-young-man-smiling-looking-camera-close-up-front-portrait-handsome-young-man-smiling-153359898.jpg",
-                height: 40,
-                width: 40,
-                haveRadius: false,
-                boxShape: BoxShape.circle,
-              ),
+              MyText(title: "Hi", color: MyColors.black, size: 10),
               const SizedBox(
-                width: 10,
+                height: 5,
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  MyText(title: "Hi", color: MyColors.black, size: 10),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  MyText(title: "Ahmed Fahmy", color: MyColors.primary, size: 10),
-                ],
-              ),
+              MyText(title: "Ahmed Fahmy", color: MyColors.primary, size: 10),
             ],
           ),
         ],
       ),
+      centerTitle: false,
+      automaticallyImplyLeading: false,
+      backgroundColor: Colors.transparent,
+      elevation: 0,
     );
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(60);
+  Size get preferredSize => Size.fromHeight(55);
 }

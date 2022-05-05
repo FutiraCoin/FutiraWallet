@@ -24,7 +24,7 @@ class BuildBottomNavigationBar extends StatelessWidget {
           activeIndex: state.data,
           gapLocation: GapLocation.none,
           splashSpeedInMilliseconds: 300,
-          height: 50,
+          height: 60,
           onTap: (index) => homeData.animateTabsPages(index, context),
         );
       },

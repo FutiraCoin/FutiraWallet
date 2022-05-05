@@ -139,6 +139,7 @@ flutter:
     - assets/images/marker.png
     - assets/images/mobile.svg
     - assets/images/password.svg
+    - assets/images/polygon.svg
     - assets/images/rectangle.svg
     - assets/images/safe.svg
     - assets/images/scan.svg

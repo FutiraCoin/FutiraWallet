@@ -11,12 +11,17 @@ class BuildTabIcon extends StatelessWidget {
     Color color = active ? MyColors.primary : MyColors.black;
     return Column(
       children: [
-        SizedBox(height: 4),
+        SizedBox(height: 5),
         SvgPicture.asset(
           homeData.tabs[index],
         ),
         SizedBox(height: 2),
-        MyText(title: homeData.tabsTxt[index] , color: color, size: 12)
+        MyText(title: homeData.tabsTxt[index] , color: MyColors.black, size: 12),
+        Spacer(),
+        Offstage(
+          offstage: !active,
+          child: SvgPicture.asset(Res.polygon),
+        )
       ],
     );
   }
