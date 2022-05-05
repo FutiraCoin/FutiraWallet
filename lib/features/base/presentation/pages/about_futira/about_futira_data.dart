@@ -1,0 +1,1 @@
+part of'about_futira_imports.dart';

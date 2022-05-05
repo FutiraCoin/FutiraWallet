@@ -20,7 +20,7 @@ class BuildLoginTypeActions extends StatelessWidget {
           DefaultButton(
             title: "Create a new wallet",
             fontSize: 12,
-            onTap: (){},
+            onTap: ()=>AutoRouter.of(context).push(SecureWalletRoute()),
           ),
         ],
       ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tdd/features/base/presentation/pages/home/tabs/main/main_imports.dart';
+import 'package:flutter_tdd/features/base/presentation/pages/home/tabs/settings/settings_imports.dart';
 import 'package:flutter_tdd/res.dart';
 import 'package:tf_custom_widgets/tf_custom_widgets.dart';
 

@@ -19,16 +19,16 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         body: TabBarView(
           controller: homeData.tabController,
           physics: NeverScrollableScrollPhysics(),
           children: [
-            RepeatedQuestions(),
+            MainScreen(),
             Container(),
             Container(),
-            Container(),
+            Settings(),
           ],
         ),
         bottomNavigationBar: BuildBottomNavigationBar(homeData: homeData),

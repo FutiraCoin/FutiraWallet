@@ -75,6 +75,8 @@ dependencies:
   animated_bottom_navigation_bar: ^0.3.2
   new_version: ^0.3.0
   rate_my_app: ^1.1.2
+  dropdown_button2: ^1.4.0
+  find_dropdown: ^1.0.0
 
 
 
@@ -114,20 +116,37 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/images/add.svg
     - assets/images/apple.svg
     - assets/images/arrow.svg
+    - assets/images/arrow_down.png
+    - assets/images/arrow_up.png
+    - assets/images/bitcoin.svg
+    - assets/images/current_blanace.svg
     - assets/images/dapps.svg
     - assets/images/discover.svg
+    - assets/images/ethereum.svg
+    - assets/images/eur.svg
+    - assets/images/eye.svg
     - assets/images/facebook.svg
+    - assets/images/futira.svg
     - assets/images/geometric.svg
     - assets/images/home.svg
     - assets/images/icon.png
     - assets/images/loginType_header.png
     - assets/images/logo.svg
+    - assets/images/logo_white.svg
     - assets/images/marker.png
     - assets/images/mobile.svg
     - assets/images/password.svg
+    - assets/images/rectangle.svg
+    - assets/images/safe.svg
+    - assets/images/scan.svg
+    - assets/images/selected.svg
     - assets/images/settings.svg
+    - assets/images/swap.png
+    - assets/images/swap_icon.png
+    - assets/images/unslected.svg
     - assets/images/welcome1.svg
     - assets/images/welcome2.svg
     - assets/images/welcome3.svg
