@@ -12,52 +12,11 @@ part of 'ad_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 AdModel _$AdModelFromJson(Map<String, dynamic> json) {
   return _AdModel.fromJson(json);
 }
-
-/// @nodoc
-class _$AdModelTearOff {
-  const _$AdModelTearOff();
-
-  _AdModel call(
-      {required String id,
-      required String titleEnglish,
-      required String titleArabic,
-      required String image,
-      required String url,
-      required DateTime fromDate,
-      required DateTime toDate,
-      required int sortOrder,
-      required bool isActive,
-      required String notes,
-      required String createdBy,
-      required DateTime createdDate}) {
-    return _AdModel(
-      id: id,
-      titleEnglish: titleEnglish,
-      titleArabic: titleArabic,
-      image: image,
-      url: url,
-      fromDate: fromDate,
-      toDate: toDate,
-      sortOrder: sortOrder,
-      isActive: isActive,
-      notes: notes,
-      createdBy: createdBy,
-      createdDate: createdDate,
-    );
-  }
-
-  AdModel fromJson(Map<String, Object?> json) {
-    return AdModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AdModel = _$AdModelTearOff();
 
 /// @nodoc
 mixin _$AdModel {
@@ -175,9 +134,10 @@ class _$AdModelCopyWithImpl<$Res> implements $AdModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
-  factory _$AdModelCopyWith(_AdModel value, $Res Function(_AdModel) then) =
-      __$AdModelCopyWithImpl<$Res>;
+abstract class _$$_AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
+  factory _$$_AdModelCopyWith(
+          _$_AdModel value, $Res Function(_$_AdModel) then) =
+      __$$_AdModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -195,13 +155,13 @@ abstract class _$AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$AdModelCopyWithImpl<$Res> extends _$AdModelCopyWithImpl<$Res>
-    implements _$AdModelCopyWith<$Res> {
-  __$AdModelCopyWithImpl(_AdModel _value, $Res Function(_AdModel) _then)
-      : super(_value, (v) => _then(v as _AdModel));
+class __$$_AdModelCopyWithImpl<$Res> extends _$AdModelCopyWithImpl<$Res>
+    implements _$$_AdModelCopyWith<$Res> {
+  __$$_AdModelCopyWithImpl(_$_AdModel _value, $Res Function(_$_AdModel) _then)
+      : super(_value, (v) => _then(v as _$_AdModel));
 
   @override
-  _AdModel get _value => super._value as _AdModel;
+  _$_AdModel get _value => super._value as _$_AdModel;
 
   @override
   $Res call({
@@ -218,7 +178,7 @@ class __$AdModelCopyWithImpl<$Res> extends _$AdModelCopyWithImpl<$Res>
     Object? createdBy = freezed,
     Object? createdDate = freezed,
   }) {
-    return _then(_AdModel(
+    return _then(_$_AdModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -326,7 +286,7 @@ class _$_AdModel implements _AdModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AdModel &&
+            other is _$_AdModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.titleEnglish, titleEnglish) &&
@@ -344,6 +304,7 @@ class _$_AdModel implements _AdModel {
                 .equals(other.createdDate, createdDate));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -362,8 +323,8 @@ class _$_AdModel implements _AdModel {
 
   @JsonKey(ignore: true)
   @override
-  _$AdModelCopyWith<_AdModel> get copyWith =>
-      __$AdModelCopyWithImpl<_AdModel>(this, _$identity);
+  _$$_AdModelCopyWith<_$_AdModel> get copyWith =>
+      __$$_AdModelCopyWithImpl<_$_AdModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -373,47 +334,47 @@ class _$_AdModel implements _AdModel {
 
 abstract class _AdModel implements AdModel {
   factory _AdModel(
-      {required String id,
-      required String titleEnglish,
-      required String titleArabic,
-      required String image,
-      required String url,
-      required DateTime fromDate,
-      required DateTime toDate,
-      required int sortOrder,
-      required bool isActive,
-      required String notes,
-      required String createdBy,
-      required DateTime createdDate}) = _$_AdModel;
+      {required final String id,
+      required final String titleEnglish,
+      required final String titleArabic,
+      required final String image,
+      required final String url,
+      required final DateTime fromDate,
+      required final DateTime toDate,
+      required final int sortOrder,
+      required final bool isActive,
+      required final String notes,
+      required final String createdBy,
+      required final DateTime createdDate}) = _$_AdModel;
 
   factory _AdModel.fromJson(Map<String, dynamic> json) = _$_AdModel.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
-  String get titleEnglish;
+  String get titleEnglish => throw _privateConstructorUsedError;
   @override
-  String get titleArabic;
+  String get titleArabic => throw _privateConstructorUsedError;
   @override
-  String get image;
+  String get image => throw _privateConstructorUsedError;
   @override
-  String get url;
+  String get url => throw _privateConstructorUsedError;
   @override
-  DateTime get fromDate;
+  DateTime get fromDate => throw _privateConstructorUsedError;
   @override
-  DateTime get toDate;
+  DateTime get toDate => throw _privateConstructorUsedError;
   @override
-  int get sortOrder;
+  int get sortOrder => throw _privateConstructorUsedError;
   @override
-  bool get isActive;
+  bool get isActive => throw _privateConstructorUsedError;
   @override
-  String get notes;
+  String get notes => throw _privateConstructorUsedError;
   @override
-  String get createdBy;
+  String get createdBy => throw _privateConstructorUsedError;
   @override
-  DateTime get createdDate;
+  DateTime get createdDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AdModelCopyWith<_AdModel> get copyWith =>
+  _$$_AdModelCopyWith<_$_AdModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

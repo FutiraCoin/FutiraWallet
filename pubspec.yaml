@@ -40,8 +40,8 @@ dependencies:
   equatable: ^2.0.3
   json_serializable: ^6.1.5
   json_annotation: ^4.4.0
-  freezed: ^1.1.1
-  freezed_annotation: ^1.1.0
+  freezed: ^2.0.3
+  freezed_annotation: ^2.0.3
   dartz: ^0.10.1
   connectivity_plus: ^2.3.0
   tf_dio_cache: ^1.0.1
@@ -77,6 +77,16 @@ dependencies:
   rate_my_app: ^1.1.2
   dropdown_button2: ^1.4.0
   find_dropdown: ^1.0.0
+  flutter_secure_storage: ^5.0.2
+  web3dart: ^2.3.5
+  provider: ^6.0.2
+  qr_flutter: ^4.0.0
+  bip39: ^1.0.6
+  hex: ^0.2.0
+  web_socket_channel: ^2.1.0
+  intl: ^0.17.0
+  qr_code_scanner: ^0.6.1
+  ed25519_hd_key: ^2.2.0
 
 
 
@@ -89,6 +99,7 @@ dev_dependencies:
   auto_route_generator: ^3.2.3
   mockito: ^5.1.0
   injectable_generator: ^1.5.3
+  built_value_generator: ^8.1.4
 
 
 flutter_icons:
@@ -154,6 +165,7 @@ flutter:
     - assets/images/welcomeHeader.svg
     - assets/lang/ar.json
     - assets/lang/en.json
+    - assets/TargaryenCoin.json
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

@@ -12,38 +12,11 @@ part of 'cat_products_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 CatProductsModel _$CatProductsModelFromJson(Map<String, dynamic> json) {
   return _CatProductsModel.fromJson(json);
 }
-
-/// @nodoc
-class _$CatProductsModelTearOff {
-  const _$CatProductsModelTearOff();
-
-  _CatProductsModel call(
-      {required int id,
-      required String nameArabic,
-      required String nameEnglish,
-      required String image,
-      @JsonKey(name: "items") required List<ProductModel> products}) {
-    return _CatProductsModel(
-      id: id,
-      nameArabic: nameArabic,
-      nameEnglish: nameEnglish,
-      image: image,
-      products: products,
-    );
-  }
-
-  CatProductsModel fromJson(Map<String, Object?> json) {
-    return CatProductsModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CatProductsModel = _$CatProductsModelTearOff();
 
 /// @nodoc
 mixin _$CatProductsModel {
@@ -116,11 +89,11 @@ class _$CatProductsModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CatProductsModelCopyWith<$Res>
+abstract class _$$_CatProductsModelCopyWith<$Res>
     implements $CatProductsModelCopyWith<$Res> {
-  factory _$CatProductsModelCopyWith(
-          _CatProductsModel value, $Res Function(_CatProductsModel) then) =
-      __$CatProductsModelCopyWithImpl<$Res>;
+  factory _$$_CatProductsModelCopyWith(
+          _$_CatProductsModel value, $Res Function(_$_CatProductsModel) then) =
+      __$$_CatProductsModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {int id,
@@ -131,15 +104,15 @@ abstract class _$CatProductsModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CatProductsModelCopyWithImpl<$Res>
+class __$$_CatProductsModelCopyWithImpl<$Res>
     extends _$CatProductsModelCopyWithImpl<$Res>
-    implements _$CatProductsModelCopyWith<$Res> {
-  __$CatProductsModelCopyWithImpl(
-      _CatProductsModel _value, $Res Function(_CatProductsModel) _then)
-      : super(_value, (v) => _then(v as _CatProductsModel));
+    implements _$$_CatProductsModelCopyWith<$Res> {
+  __$$_CatProductsModelCopyWithImpl(
+      _$_CatProductsModel _value, $Res Function(_$_CatProductsModel) _then)
+      : super(_value, (v) => _then(v as _$_CatProductsModel));
 
   @override
-  _CatProductsModel get _value => super._value as _CatProductsModel;
+  _$_CatProductsModel get _value => super._value as _$_CatProductsModel;
 
   @override
   $Res call({
@@ -149,7 +122,7 @@ class __$CatProductsModelCopyWithImpl<$Res>
     Object? image = freezed,
     Object? products = freezed,
   }) {
-    return _then(_CatProductsModel(
+    return _then(_$_CatProductsModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -167,7 +140,7 @@ class __$CatProductsModelCopyWithImpl<$Res>
           : image // ignore: cast_nullable_to_non_nullable
               as String,
       products: products == freezed
-          ? _value.products
+          ? _value._products
           : products // ignore: cast_nullable_to_non_nullable
               as List<ProductModel>,
     ));
@@ -183,7 +156,8 @@ class _$_CatProductsModel implements _CatProductsModel {
       required this.nameArabic,
       required this.nameEnglish,
       required this.image,
-      @JsonKey(name: "items") required this.products});
+      @JsonKey(name: "items") required final List<ProductModel> products})
+      : _products = products;
 
   factory _$_CatProductsModel.fromJson(Map<String, dynamic> json) =>
       _$$_CatProductsModelFromJson(json);
@@ -196,9 +170,13 @@ class _$_CatProductsModel implements _CatProductsModel {
   final String nameEnglish;
   @override
   final String image;
+  final List<ProductModel> _products;
   @override
   @JsonKey(name: "items")
-  final List<ProductModel> products;
+  List<ProductModel> get products {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_products);
+  }
 
   @override
   String toString() {
@@ -209,16 +187,17 @@ class _$_CatProductsModel implements _CatProductsModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CatProductsModel &&
+            other is _$_CatProductsModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.nameArabic, nameArabic) &&
             const DeepCollectionEquality()
                 .equals(other.nameEnglish, nameEnglish) &&
             const DeepCollectionEquality().equals(other.image, image) &&
-            const DeepCollectionEquality().equals(other.products, products));
+            const DeepCollectionEquality().equals(other._products, _products));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -226,12 +205,12 @@ class _$_CatProductsModel implements _CatProductsModel {
       const DeepCollectionEquality().hash(nameArabic),
       const DeepCollectionEquality().hash(nameEnglish),
       const DeepCollectionEquality().hash(image),
-      const DeepCollectionEquality().hash(products));
+      const DeepCollectionEquality().hash(_products));
 
   @JsonKey(ignore: true)
   @override
-  _$CatProductsModelCopyWith<_CatProductsModel> get copyWith =>
-      __$CatProductsModelCopyWithImpl<_CatProductsModel>(this, _$identity);
+  _$$_CatProductsModelCopyWith<_$_CatProductsModel> get copyWith =>
+      __$$_CatProductsModelCopyWithImpl<_$_CatProductsModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -241,29 +220,29 @@ class _$_CatProductsModel implements _CatProductsModel {
 
 abstract class _CatProductsModel implements CatProductsModel {
   factory _CatProductsModel(
-          {required int id,
-          required String nameArabic,
-          required String nameEnglish,
-          required String image,
-          @JsonKey(name: "items") required List<ProductModel> products}) =
+          {required final int id,
+          required final String nameArabic,
+          required final String nameEnglish,
+          required final String image,
+          @JsonKey(name: "items") required final List<ProductModel> products}) =
       _$_CatProductsModel;
 
   factory _CatProductsModel.fromJson(Map<String, dynamic> json) =
       _$_CatProductsModel.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  String get nameArabic;
+  String get nameArabic => throw _privateConstructorUsedError;
   @override
-  String get nameEnglish;
+  String get nameEnglish => throw _privateConstructorUsedError;
   @override
-  String get image;
+  String get image => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "items")
-  List<ProductModel> get products;
+  List<ProductModel> get products => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CatProductsModelCopyWith<_CatProductsModel> get copyWith =>
+  _$$_CatProductsModelCopyWith<_$_CatProductsModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

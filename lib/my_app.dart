@@ -26,7 +26,10 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    getIt.registerSingleton(SharedPreferences.getInstance());
+    // getIt.registerSingleton(SharedPreferences.getInstance());
+    // MnemonicsStore.init().then((value) {
+    //   getIt.registerSingleton(value);
+    // });
     getIt<FirebaseAnalyticsHelper>().analytics.setConsent(
         adStorageConsentGranted: false, analyticsStorageConsentGranted: true);
     super.initState();

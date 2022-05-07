@@ -8,6 +8,7 @@ class BuildRecoveryPhrase extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List<String> words = getIt<MnemonicsHelper>().mnemonic.split(' ').toList();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -40,14 +41,15 @@ class BuildRecoveryPhrase extends StatelessWidget {
                       crossAxisSpacing: 50,
                       mainAxisSpacing: 15,
                     ),
-                    children: List.generate(12, (index) => MyText(
-                      title: "${index+1}. dolor",
+                    children: List.generate(words.length, (index) => MyText(
+                      title: "${index+1}. ${words[index]}",
                       color: MyColors.blackOpacity,
                       size: 12)),
                   ),
                 ),
               );
-            }),
+            },
+        ),
         MyText(
             alien: TextAlign.center,
             title: "Tap to reveal your Secret Recovery phrase",
