@@ -15,7 +15,7 @@ class ConfirmRecoveryButton extends StatelessWidget {
         return LoadingButton(
           btnKey: recoveryData.btnKey,
           title: "Next",
-          onTap: () => recoveryData.createWallet(),
+          onTap: () => recoveryData.createWallet(context),
           color: state.data.length == 12? MyColors.primary : MyColors.grey,
           borderColor: state.data.length == 12? MyColors.primary : MyColors.grey,
           textColor: state.data.length == 12? MyColors.white : MyColors.blackOpacity,

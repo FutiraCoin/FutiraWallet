@@ -5,6 +5,7 @@ class BuildCurrentBalance extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var wallet = context.watch<WalletCubit>().state.wallet;
     return Stack(
       alignment: Alignment.center,
       children: [
@@ -23,7 +24,7 @@ class BuildCurrentBalance extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: MyText(
-                  title: "150 FUT",
+                  title: "${EthAmountFormatter(wallet.ethBalance).format()} ${wallet.network.config.symbol}",
                   color: MyColors.white,
                   fontWeight: FontWeight.normal,
                   size: 18),

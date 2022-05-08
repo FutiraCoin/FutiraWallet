@@ -8,7 +8,7 @@ class RestoreBackup extends StatefulWidget {
 }
 
 class _RestoreBackupState extends State<RestoreBackup> {
-  final RestoreBackupData restoreBackupData = RestoreBackupData();
+  final RestoreBackupData backupData = RestoreBackupData();
 
   @override
   void initState() {
@@ -32,15 +32,16 @@ class _RestoreBackupState extends State<RestoreBackup> {
                   size: 12,
                   alien: TextAlign.center,
                 ),
-                BuildInputField(),
-                BuildGridWords(),
+                BuildInputField(backupData: backupData),
+                BuildGridWords(backupData: backupData),
               ],
             ),
           ),
           DefaultButton(
             title: "Next",
             fontSize: 12,
-            onTap: ()=> AutoRouter.of(context).push(GeometricScreenRoute()),
+            onTap: ()=> backupData.restoreWallet(context),
+            // onTap: ()=> AutoRouter.of(context).push(GeometricScreenRoute()),
             margin: EdgeInsets.all(30),
           ),
         ],

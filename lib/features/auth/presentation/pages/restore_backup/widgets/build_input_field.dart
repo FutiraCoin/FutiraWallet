@@ -1,7 +1,8 @@
 part of 'restore_backup_widgets_imports.dart';
 
 class BuildInputField extends StatelessWidget {
-  const BuildInputField({Key? key}) : super(key: key);
+  final RestoreBackupData backupData;
+  const BuildInputField({Key? key, required this.backupData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +21,8 @@ class BuildInputField extends StatelessWidget {
           hint: 'Enter word phase',
           contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           max: 4,
+          controller: backupData.word,
+          onChange: (value) => backupData.addWordsToList(),
         )
       ],
     );

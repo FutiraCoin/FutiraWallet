@@ -1,32 +1,34 @@
-import 'package:built_collection/built_collection.dart';
-import 'package:built_value/built_value.dart';
-
 import 'network_type.dart';
 
-part 'wallet.g.dart';
+class Wallet {
 
-abstract class Wallet implements Built<Wallet, WalletBuilder> {
-  factory Wallet([void Function(WalletBuilder)? updates]) => _$Wallet((b) => b
-    ..tokenBalance = BigInt.from(0)
-    ..ethBalance = BigInt.from(0)
-    ..network = NetworkType.Ethereum
-    ..errors = BuiltList<String>().toBuilder()
-    ..loading = false
-    ..update(updates));
+  factory Wallet.init()=> Wallet(
+    ethBalance: BigInt.from(0),
+    loading: false,
+    address: "",
+    privateKey: "",
+    network: NetworkType.BSC,
+    tokenBalance: BigInt.from(0),
+  );
 
-  Wallet._();
+  NetworkType network;
 
-  NetworkType get network;
+  String? address;
 
-  String? get address;
+  String? privateKey;
 
-  String? get privateKey;
+  BigInt tokenBalance;
 
-  BigInt get tokenBalance;
+  BigInt ethBalance;
 
-  BigInt get ethBalance;
+  bool loading;
 
-  bool get loading;
-
-  BuiltList<String>? get errors;
+  Wallet({
+    required this.network,
+    this.address,
+    this.privateKey,
+    required this.tokenBalance,
+    required this.ethBalance,
+    required this.loading,
+  });
 }

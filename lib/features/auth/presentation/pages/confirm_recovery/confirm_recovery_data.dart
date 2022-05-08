@@ -19,8 +19,14 @@ class ConfirmRecoveryData {
     wordsCubit.onUpdateData(wordsCubit.state.data);
   }
 
-  Future<void> createWallet() async {
-
+  Future<void> createWallet(BuildContext context) async {
+    if (selectedWordsCubit.state.data.length==12) {
+      String confirmedMnemonic = selectedWordsCubit.state.data.join(' ');
+      var store = getIt<MnemonicsHelper>();
+      if (await store.confirmMnemonic(confirmedMnemonic)) {
+        AutoRouter.of(context).push(HomeRoute());
+      }
+    }
   }
 
 

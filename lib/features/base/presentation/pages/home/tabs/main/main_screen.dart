@@ -8,6 +8,16 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+
+  final MainData mainData = MainData();
+
+  @override
+  void initState() {
+    mainData.initialiseWallet(context);
+    super.initState();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
