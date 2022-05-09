@@ -16,6 +16,8 @@ abstract class IContractService {
   Future<EtherAmount> getEthBalance(EthereumAddress from);
   Future<void> dispose();
   StreamSubscription listenTransfer(TransferEvent onTransfer);
+  Future<String> getTokenDecimal(EthereumAddress from);
+  Future<String> getTokenSymbol(EthereumAddress from);
 }
 
 class ContractService implements IContractService {
@@ -27,6 +29,8 @@ class ContractService implements IContractService {
   ContractEvent _transferEvent() => contract.event('Transfer');
   ContractFunction _balanceFunction() => contract.function('balanceOf');
   ContractFunction _sendFunction() => contract.function('transfer');
+  ContractFunction _decimalsFunction() => contract.function('decimals');
+  ContractFunction _symbolFunction() => contract.function('symbol');
 
   @override
   EthPrivateKey getCredentials(String privateKey) =>
@@ -82,8 +86,30 @@ class ContractService implements IContractService {
       function: _balanceFunction(),
       params: [from],
     );
-
+    print("getTokenBalance ==============> $response");
     return response.first as BigInt;
+  }
+
+  @override
+  Future<String> getTokenDecimal(EthereumAddress from)async {
+    final response = await client.call(
+      contract: contract,
+      function: _decimalsFunction(),
+      params: [],
+    );
+    print("getTokenDecimal ==============> $response");
+    return response.first.toString();
+  }
+
+  @override
+  Future<String> getTokenSymbol(EthereumAddress from) async {
+    final response = await client.call(
+      contract: contract,
+      function: _symbolFunction(),
+      params: [],
+    );
+    print("getTokenSymbol ==============> $response");
+    return response.first.toString();
   }
 
   @override
@@ -121,4 +147,6 @@ class ContractService implements IContractService {
   Future<void> dispose() async {
     await client.dispose();
   }
+
+
 }

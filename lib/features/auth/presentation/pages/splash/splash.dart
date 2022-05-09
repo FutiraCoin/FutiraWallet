@@ -17,12 +17,6 @@ class _SplashState extends State<Splash> {
   }
 
   @override
-  void didChangeDependencies() {
-    precacheImage(const AssetImage(Res.logo), context);
-    super.didChangeDependencies();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Container(
       color: MyColors.primary,

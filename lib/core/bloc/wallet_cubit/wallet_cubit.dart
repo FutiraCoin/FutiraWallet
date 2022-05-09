@@ -99,6 +99,12 @@ class WalletCubit extends Cubit<WalletState> {
     final tokenBalance = await contractService
         .getTokenBalance(web3.EthereumAddress.fromHex(state.wallet.address!));
 
+    contractService
+        .getTokenDecimal(web3.EthereumAddress.fromHex(state.wallet.address!));
+
+    contractService
+        .getTokenSymbol(web3.EthereumAddress.fromHex(state.wallet.address!));
+
     final ethBalance = await contractService
         .getEthBalance(web3.EthereumAddress.fromHex(state.wallet.address!));
     state.wallet.ethBalance = ethBalance.getInWei;

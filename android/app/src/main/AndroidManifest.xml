@@ -17,7 +17,7 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
    <application
-        android:label="flutter_tdd"
+        android:label="Futira Wallet"
         android:usesCleartextTraffic="true"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">

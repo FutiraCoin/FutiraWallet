@@ -22,7 +22,7 @@ class MainScreenButtons extends StatelessWidget {
               color: MyColors.primary,
               img: Res.arrow_up,
               title: "Send",
-              onTap: () {},
+              onTap: () => AutoRouter.of(context).push(SendCoinsRoute()),
             ),
             BuildButtonItem(
               color: Color(0xffC4C4C4),

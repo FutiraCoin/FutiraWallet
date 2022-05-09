@@ -28,7 +28,7 @@ class AppConfig {
     ),
     NetworkType.BSC: AppConfigParams(
       'https://data-seed-prebsc-1-s1.binance.org:8545',
-      '0xD9F89648d0865dEe2347D6034777ce4aB303b57e',
+      '0x9557bd44266Be183098Bdcc93EcaDA23c5725f8b',
       symbol: 'BNB',
       faucetUrl: 'https://testnet.binance.org/faucet-smart',
       enabled: true,

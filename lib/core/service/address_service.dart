@@ -3,6 +3,7 @@ import 'package:convert/convert.dart';
 import 'package:ed25519_hd_key/ed25519_hd_key.dart';
 import 'package:hex/hex.dart';
 import 'package:web3dart/credentials.dart';
+import 'package:web3dart/crypto.dart';
 
 import 'configuration_service.dart';
 
@@ -43,9 +44,10 @@ class AddressService implements IAddressService {
   @override
   Future<EthereumAddress> getPublicAddress(String privateKey) async {
     final private = EthPrivateKey.fromHex(privateKey);
-
     final address = await private.extractAddress();
+    var publicKey = bytesToHex(private.publicKey.getEncoded());
     print('address: $address');
+    print('publicKey: $publicKey');
     return address;
   }
 

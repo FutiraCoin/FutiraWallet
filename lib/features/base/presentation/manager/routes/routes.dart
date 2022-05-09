@@ -9,6 +9,7 @@ import '../../pages/language/language_imports.dart';
 import '../../pages/my_wallets/my_wallets_imports.dart';
 import '../../pages/privacy_policy/privacy_policy_imports.dart';
 import '../../pages/profile/profile_imports.dart';
+import '../../pages/send_coins/send_coins_imports.dart';
 import '../../pages/support/support_imports.dart';
 import '../../pages/swap/swap_imports.dart';
 import '../../pages/watch_wallet/watch_wallet_imports.dart';
@@ -19,6 +20,7 @@ const List<AutoRoute> baseRoute = [
   AutoRoute(page: MyWallets),
   AutoRoute(page: CreateWallet),
   AutoRoute(page: WatchWallet),
+  AutoRoute(page: SendCoins),
   AutoRoute(page: Currency),
   AutoRoute(page: Language),
   AutoRoute(page: Swap),

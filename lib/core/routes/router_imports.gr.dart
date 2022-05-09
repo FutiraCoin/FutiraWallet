@@ -10,8 +10,8 @@
 //
 // ignore_for_file: type=lint
 
-import 'package:auto_route/auto_route.dart' as _i29;
-import 'package:flutter/material.dart' as _i30;
+import 'package:auto_route/auto_route.dart' as _i30;
+import 'package:flutter/material.dart' as _i31;
 import 'package:flutter_tdd/features/auth/presentation/pages/active_account/active_account_imports.dart'
     as _i8;
 import 'package:flutter_tdd/features/auth/presentation/pages/confirm_recovery/confirm_recovery_imports.dart'
@@ -43,25 +43,27 @@ import 'package:flutter_tdd/features/auth/presentation/pages/splash/splash_impor
 import 'package:flutter_tdd/features/auth/presentation/pages/verify_code/verify_code_imports.dart'
     as _i9;
 import 'package:flutter_tdd/features/base/presentation/pages/about_futira/about_futira_imports.dart'
-    as _i26;
+    as _i27;
 import 'package:flutter_tdd/features/base/presentation/pages/create_wallet/create_wallet_imports.dart'
     as _i21;
 import 'package:flutter_tdd/features/base/presentation/pages/currency/currency_imports.dart'
-    as _i23;
+    as _i24;
 import 'package:flutter_tdd/features/base/presentation/pages/home/home_imports.dart'
     as _i18;
 import 'package:flutter_tdd/features/base/presentation/pages/language/language_imports.dart'
-    as _i24;
+    as _i25;
 import 'package:flutter_tdd/features/base/presentation/pages/my_wallets/my_wallets_imports.dart'
     as _i20;
 import 'package:flutter_tdd/features/base/presentation/pages/privacy_policy/privacy_policy_imports.dart'
-    as _i28;
+    as _i29;
 import 'package:flutter_tdd/features/base/presentation/pages/profile/profile_imports.dart'
     as _i19;
+import 'package:flutter_tdd/features/base/presentation/pages/send_coins/send_coins_imports.dart'
+    as _i23;
 import 'package:flutter_tdd/features/base/presentation/pages/support/support_imports.dart'
-    as _i27;
+    as _i28;
 import 'package:flutter_tdd/features/base/presentation/pages/swap/swap_imports.dart'
-    as _i25;
+    as _i26;
 import 'package:flutter_tdd/features/base/presentation/pages/watch_wallet/watch_wallet_imports.dart'
     as _i22;
 import 'package:flutter_tdd/features/general/presentation/pages/repeated_questions/repeated_questions_imports.dart'
@@ -69,164 +71,169 @@ import 'package:flutter_tdd/features/general/presentation/pages/repeated_questio
 import 'package:flutter_tdd/features/general/presentation/pages/terms/terms_imports.dart'
     as _i16;
 
-class AppRouter extends _i29.RootStackRouter {
-  AppRouter([_i30.GlobalKey<_i30.NavigatorState>? navigatorKey])
+class AppRouter extends _i30.RootStackRouter {
+  AppRouter([_i31.GlobalKey<_i31.NavigatorState>? navigatorKey])
       : super(navigatorKey);
 
   @override
-  final Map<String, _i29.PageFactory> pagesMap = {
+  final Map<String, _i30.PageFactory> pagesMap = {
     SplashRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i1.Splash());
     },
     SelectLanguageRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i2.SelectLanguage());
     },
     LoginRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i3.Login());
     },
     IntroScreensRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i4.IntroScreens());
     },
     LoginTypeRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i5.LoginType());
     },
     RestoreBackupRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i6.RestoreBackup());
     },
     RegisterRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i7.Register());
     },
     ActiveAccountRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i8.ActiveAccount());
     },
     VerifyCodeRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i9.VerifyCode());
     },
     ResetPasswordRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i10.ResetPassword());
     },
     ForgetPasswordRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i11.ForgetPassword());
     },
     GeometricScreenRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i12.GeometricScreen());
     },
     SecureWalletRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i13.SecureWallet());
     },
     RecoveryPhraseRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i14.RecoveryPhrase());
     },
     ConfirmRecoveryRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i15.ConfirmRecovery());
     },
     TermsRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i16.Terms());
     },
     RepeatedQuestionsRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i17.RepeatedQuestions());
     },
     HomeRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i18.Home());
     },
     ProfileRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i19.Profile());
     },
     MyWalletsRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i20.MyWallets());
     },
     CreateWalletRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i21.CreateWallet());
     },
     WatchWalletRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
+      return _i30.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i22.WatchWallet());
     },
+    SendCoinsRoute.name: (routeData) {
+      return _i30.AdaptivePage<dynamic>(
+          routeData: routeData, child: const _i23.SendCoins());
+    },
     CurrencyRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i23.Currency());
+      return _i30.AdaptivePage<dynamic>(
+          routeData: routeData, child: const _i24.Currency());
     },
     LanguageRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i24.Language());
+      return _i30.AdaptivePage<dynamic>(
+          routeData: routeData, child: const _i25.Language());
     },
     SwapRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i25.Swap());
+      return _i30.AdaptivePage<dynamic>(
+          routeData: routeData, child: const _i26.Swap());
     },
     AboutFutiraRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i26.AboutFutira());
+      return _i30.AdaptivePage<dynamic>(
+          routeData: routeData, child: const _i27.AboutFutira());
     },
     SupportRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i27.Support());
+      return _i30.AdaptivePage<dynamic>(
+          routeData: routeData, child: const _i28.Support());
     },
     PrivacyPolicyRoute.name: (routeData) {
-      return _i29.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i28.PrivacyPolicy());
+      return _i30.AdaptivePage<dynamic>(
+          routeData: routeData, child: const _i29.PrivacyPolicy());
     }
   };
 
   @override
-  List<_i29.RouteConfig> get routes => [
-        _i29.RouteConfig(SplashRoute.name, path: '/'),
-        _i29.RouteConfig(SelectLanguageRoute.name, path: '/select-language'),
-        _i29.RouteConfig(LoginRoute.name, path: '/Login'),
-        _i29.RouteConfig(IntroScreensRoute.name, path: '/intro-screens'),
-        _i29.RouteConfig(LoginTypeRoute.name, path: '/login-type'),
-        _i29.RouteConfig(RestoreBackupRoute.name, path: '/restore-backup'),
-        _i29.RouteConfig(RegisterRoute.name, path: '/Register'),
-        _i29.RouteConfig(ActiveAccountRoute.name, path: '/active-account'),
-        _i29.RouteConfig(VerifyCodeRoute.name, path: '/verify-code'),
-        _i29.RouteConfig(ResetPasswordRoute.name, path: '/reset-password'),
-        _i29.RouteConfig(ForgetPasswordRoute.name, path: '/forget-password'),
-        _i29.RouteConfig(GeometricScreenRoute.name, path: '/geometric-screen'),
-        _i29.RouteConfig(SecureWalletRoute.name, path: '/secure-wallet'),
-        _i29.RouteConfig(RecoveryPhraseRoute.name, path: '/recovery-phrase'),
-        _i29.RouteConfig(ConfirmRecoveryRoute.name, path: '/confirm-recovery'),
-        _i29.RouteConfig(TermsRoute.name, path: '/Terms'),
-        _i29.RouteConfig(RepeatedQuestionsRoute.name,
+  List<_i30.RouteConfig> get routes => [
+        _i30.RouteConfig(SplashRoute.name, path: '/'),
+        _i30.RouteConfig(SelectLanguageRoute.name, path: '/select-language'),
+        _i30.RouteConfig(LoginRoute.name, path: '/Login'),
+        _i30.RouteConfig(IntroScreensRoute.name, path: '/intro-screens'),
+        _i30.RouteConfig(LoginTypeRoute.name, path: '/login-type'),
+        _i30.RouteConfig(RestoreBackupRoute.name, path: '/restore-backup'),
+        _i30.RouteConfig(RegisterRoute.name, path: '/Register'),
+        _i30.RouteConfig(ActiveAccountRoute.name, path: '/active-account'),
+        _i30.RouteConfig(VerifyCodeRoute.name, path: '/verify-code'),
+        _i30.RouteConfig(ResetPasswordRoute.name, path: '/reset-password'),
+        _i30.RouteConfig(ForgetPasswordRoute.name, path: '/forget-password'),
+        _i30.RouteConfig(GeometricScreenRoute.name, path: '/geometric-screen'),
+        _i30.RouteConfig(SecureWalletRoute.name, path: '/secure-wallet'),
+        _i30.RouteConfig(RecoveryPhraseRoute.name, path: '/recovery-phrase'),
+        _i30.RouteConfig(ConfirmRecoveryRoute.name, path: '/confirm-recovery'),
+        _i30.RouteConfig(TermsRoute.name, path: '/Terms'),
+        _i30.RouteConfig(RepeatedQuestionsRoute.name,
             path: '/repeated-questions'),
-        _i29.RouteConfig(HomeRoute.name, path: '/Home'),
-        _i29.RouteConfig(ProfileRoute.name, path: '/Profile'),
-        _i29.RouteConfig(MyWalletsRoute.name, path: '/my-wallets'),
-        _i29.RouteConfig(CreateWalletRoute.name, path: '/create-wallet'),
-        _i29.RouteConfig(WatchWalletRoute.name, path: '/watch-wallet'),
-        _i29.RouteConfig(CurrencyRoute.name, path: '/Currency'),
-        _i29.RouteConfig(LanguageRoute.name, path: '/Language'),
-        _i29.RouteConfig(SwapRoute.name, path: '/Swap'),
-        _i29.RouteConfig(AboutFutiraRoute.name, path: '/about-futira'),
-        _i29.RouteConfig(SupportRoute.name, path: '/Support'),
-        _i29.RouteConfig(PrivacyPolicyRoute.name, path: '/privacy-policy'),
-        _i29.RouteConfig(TermsRoute.name, path: '/Terms')
+        _i30.RouteConfig(HomeRoute.name, path: '/Home'),
+        _i30.RouteConfig(ProfileRoute.name, path: '/Profile'),
+        _i30.RouteConfig(MyWalletsRoute.name, path: '/my-wallets'),
+        _i30.RouteConfig(CreateWalletRoute.name, path: '/create-wallet'),
+        _i30.RouteConfig(WatchWalletRoute.name, path: '/watch-wallet'),
+        _i30.RouteConfig(SendCoinsRoute.name, path: '/send-coins'),
+        _i30.RouteConfig(CurrencyRoute.name, path: '/Currency'),
+        _i30.RouteConfig(LanguageRoute.name, path: '/Language'),
+        _i30.RouteConfig(SwapRoute.name, path: '/Swap'),
+        _i30.RouteConfig(AboutFutiraRoute.name, path: '/about-futira'),
+        _i30.RouteConfig(SupportRoute.name, path: '/Support'),
+        _i30.RouteConfig(PrivacyPolicyRoute.name, path: '/privacy-policy'),
+        _i30.RouteConfig(TermsRoute.name, path: '/Terms')
       ];
 }
 
 /// generated route for
 /// [_i1.Splash]
-class SplashRoute extends _i29.PageRouteInfo<void> {
+class SplashRoute extends _i30.PageRouteInfo<void> {
   const SplashRoute() : super(SplashRoute.name, path: '/');
 
   static const String name = 'SplashRoute';
@@ -234,7 +241,7 @@ class SplashRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.SelectLanguage]
-class SelectLanguageRoute extends _i29.PageRouteInfo<void> {
+class SelectLanguageRoute extends _i30.PageRouteInfo<void> {
   const SelectLanguageRoute()
       : super(SelectLanguageRoute.name, path: '/select-language');
 
@@ -243,7 +250,7 @@ class SelectLanguageRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.Login]
-class LoginRoute extends _i29.PageRouteInfo<void> {
+class LoginRoute extends _i30.PageRouteInfo<void> {
   const LoginRoute() : super(LoginRoute.name, path: '/Login');
 
   static const String name = 'LoginRoute';
@@ -251,7 +258,7 @@ class LoginRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.IntroScreens]
-class IntroScreensRoute extends _i29.PageRouteInfo<void> {
+class IntroScreensRoute extends _i30.PageRouteInfo<void> {
   const IntroScreensRoute()
       : super(IntroScreensRoute.name, path: '/intro-screens');
 
@@ -260,7 +267,7 @@ class IntroScreensRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i5.LoginType]
-class LoginTypeRoute extends _i29.PageRouteInfo<void> {
+class LoginTypeRoute extends _i30.PageRouteInfo<void> {
   const LoginTypeRoute() : super(LoginTypeRoute.name, path: '/login-type');
 
   static const String name = 'LoginTypeRoute';
@@ -268,7 +275,7 @@ class LoginTypeRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i6.RestoreBackup]
-class RestoreBackupRoute extends _i29.PageRouteInfo<void> {
+class RestoreBackupRoute extends _i30.PageRouteInfo<void> {
   const RestoreBackupRoute()
       : super(RestoreBackupRoute.name, path: '/restore-backup');
 
@@ -277,7 +284,7 @@ class RestoreBackupRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i7.Register]
-class RegisterRoute extends _i29.PageRouteInfo<void> {
+class RegisterRoute extends _i30.PageRouteInfo<void> {
   const RegisterRoute() : super(RegisterRoute.name, path: '/Register');
 
   static const String name = 'RegisterRoute';
@@ -285,7 +292,7 @@ class RegisterRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i8.ActiveAccount]
-class ActiveAccountRoute extends _i29.PageRouteInfo<void> {
+class ActiveAccountRoute extends _i30.PageRouteInfo<void> {
   const ActiveAccountRoute()
       : super(ActiveAccountRoute.name, path: '/active-account');
 
@@ -294,7 +301,7 @@ class ActiveAccountRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i9.VerifyCode]
-class VerifyCodeRoute extends _i29.PageRouteInfo<void> {
+class VerifyCodeRoute extends _i30.PageRouteInfo<void> {
   const VerifyCodeRoute() : super(VerifyCodeRoute.name, path: '/verify-code');
 
   static const String name = 'VerifyCodeRoute';
@@ -302,7 +309,7 @@ class VerifyCodeRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i10.ResetPassword]
-class ResetPasswordRoute extends _i29.PageRouteInfo<void> {
+class ResetPasswordRoute extends _i30.PageRouteInfo<void> {
   const ResetPasswordRoute()
       : super(ResetPasswordRoute.name, path: '/reset-password');
 
@@ -311,7 +318,7 @@ class ResetPasswordRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i11.ForgetPassword]
-class ForgetPasswordRoute extends _i29.PageRouteInfo<void> {
+class ForgetPasswordRoute extends _i30.PageRouteInfo<void> {
   const ForgetPasswordRoute()
       : super(ForgetPasswordRoute.name, path: '/forget-password');
 
@@ -320,7 +327,7 @@ class ForgetPasswordRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i12.GeometricScreen]
-class GeometricScreenRoute extends _i29.PageRouteInfo<void> {
+class GeometricScreenRoute extends _i30.PageRouteInfo<void> {
   const GeometricScreenRoute()
       : super(GeometricScreenRoute.name, path: '/geometric-screen');
 
@@ -329,7 +336,7 @@ class GeometricScreenRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i13.SecureWallet]
-class SecureWalletRoute extends _i29.PageRouteInfo<void> {
+class SecureWalletRoute extends _i30.PageRouteInfo<void> {
   const SecureWalletRoute()
       : super(SecureWalletRoute.name, path: '/secure-wallet');
 
@@ -338,7 +345,7 @@ class SecureWalletRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i14.RecoveryPhrase]
-class RecoveryPhraseRoute extends _i29.PageRouteInfo<void> {
+class RecoveryPhraseRoute extends _i30.PageRouteInfo<void> {
   const RecoveryPhraseRoute()
       : super(RecoveryPhraseRoute.name, path: '/recovery-phrase');
 
@@ -347,7 +354,7 @@ class RecoveryPhraseRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i15.ConfirmRecovery]
-class ConfirmRecoveryRoute extends _i29.PageRouteInfo<void> {
+class ConfirmRecoveryRoute extends _i30.PageRouteInfo<void> {
   const ConfirmRecoveryRoute()
       : super(ConfirmRecoveryRoute.name, path: '/confirm-recovery');
 
@@ -356,7 +363,7 @@ class ConfirmRecoveryRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i16.Terms]
-class TermsRoute extends _i29.PageRouteInfo<void> {
+class TermsRoute extends _i30.PageRouteInfo<void> {
   const TermsRoute() : super(TermsRoute.name, path: '/Terms');
 
   static const String name = 'TermsRoute';
@@ -364,7 +371,7 @@ class TermsRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i17.RepeatedQuestions]
-class RepeatedQuestionsRoute extends _i29.PageRouteInfo<void> {
+class RepeatedQuestionsRoute extends _i30.PageRouteInfo<void> {
   const RepeatedQuestionsRoute()
       : super(RepeatedQuestionsRoute.name, path: '/repeated-questions');
 
@@ -373,7 +380,7 @@ class RepeatedQuestionsRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i18.Home]
-class HomeRoute extends _i29.PageRouteInfo<void> {
+class HomeRoute extends _i30.PageRouteInfo<void> {
   const HomeRoute() : super(HomeRoute.name, path: '/Home');
 
   static const String name = 'HomeRoute';
@@ -381,7 +388,7 @@ class HomeRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i19.Profile]
-class ProfileRoute extends _i29.PageRouteInfo<void> {
+class ProfileRoute extends _i30.PageRouteInfo<void> {
   const ProfileRoute() : super(ProfileRoute.name, path: '/Profile');
 
   static const String name = 'ProfileRoute';
@@ -389,7 +396,7 @@ class ProfileRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i20.MyWallets]
-class MyWalletsRoute extends _i29.PageRouteInfo<void> {
+class MyWalletsRoute extends _i30.PageRouteInfo<void> {
   const MyWalletsRoute() : super(MyWalletsRoute.name, path: '/my-wallets');
 
   static const String name = 'MyWalletsRoute';
@@ -397,7 +404,7 @@ class MyWalletsRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i21.CreateWallet]
-class CreateWalletRoute extends _i29.PageRouteInfo<void> {
+class CreateWalletRoute extends _i30.PageRouteInfo<void> {
   const CreateWalletRoute()
       : super(CreateWalletRoute.name, path: '/create-wallet');
 
@@ -406,7 +413,7 @@ class CreateWalletRoute extends _i29.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i22.WatchWallet]
-class WatchWalletRoute extends _i29.PageRouteInfo<void> {
+class WatchWalletRoute extends _i30.PageRouteInfo<void> {
   const WatchWalletRoute()
       : super(WatchWalletRoute.name, path: '/watch-wallet');
 
@@ -414,32 +421,40 @@ class WatchWalletRoute extends _i29.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i23.Currency]
-class CurrencyRoute extends _i29.PageRouteInfo<void> {
+/// [_i23.SendCoins]
+class SendCoinsRoute extends _i30.PageRouteInfo<void> {
+  const SendCoinsRoute() : super(SendCoinsRoute.name, path: '/send-coins');
+
+  static const String name = 'SendCoinsRoute';
+}
+
+/// generated route for
+/// [_i24.Currency]
+class CurrencyRoute extends _i30.PageRouteInfo<void> {
   const CurrencyRoute() : super(CurrencyRoute.name, path: '/Currency');
 
   static const String name = 'CurrencyRoute';
 }
 
 /// generated route for
-/// [_i24.Language]
-class LanguageRoute extends _i29.PageRouteInfo<void> {
+/// [_i25.Language]
+class LanguageRoute extends _i30.PageRouteInfo<void> {
   const LanguageRoute() : super(LanguageRoute.name, path: '/Language');
 
   static const String name = 'LanguageRoute';
 }
 
 /// generated route for
-/// [_i25.Swap]
-class SwapRoute extends _i29.PageRouteInfo<void> {
+/// [_i26.Swap]
+class SwapRoute extends _i30.PageRouteInfo<void> {
   const SwapRoute() : super(SwapRoute.name, path: '/Swap');
 
   static const String name = 'SwapRoute';
 }
 
 /// generated route for
-/// [_i26.AboutFutira]
-class AboutFutiraRoute extends _i29.PageRouteInfo<void> {
+/// [_i27.AboutFutira]
+class AboutFutiraRoute extends _i30.PageRouteInfo<void> {
   const AboutFutiraRoute()
       : super(AboutFutiraRoute.name, path: '/about-futira');
 
@@ -447,16 +462,16 @@ class AboutFutiraRoute extends _i29.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i27.Support]
-class SupportRoute extends _i29.PageRouteInfo<void> {
+/// [_i28.Support]
+class SupportRoute extends _i30.PageRouteInfo<void> {
   const SupportRoute() : super(SupportRoute.name, path: '/Support');
 
   static const String name = 'SupportRoute';
 }
 
 /// generated route for
-/// [_i28.PrivacyPolicy]
-class PrivacyPolicyRoute extends _i29.PageRouteInfo<void> {
+/// [_i29.PrivacyPolicy]
+class PrivacyPolicyRoute extends _i30.PageRouteInfo<void> {
   const PrivacyPolicyRoute()
       : super(PrivacyPolicyRoute.name, path: '/privacy-policy');
 
