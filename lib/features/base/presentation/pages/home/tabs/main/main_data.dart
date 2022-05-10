@@ -3,9 +3,9 @@ part of'main_imports.dart';
 class MainData {
 
 
-  initialiseWallet(BuildContext context)async{
+  Future<void> initialiseWallet(BuildContext context)async{
     final store = context.read<WalletCubit>();
-    store.initialise();
+    await store.initialise();
   }
 
 }

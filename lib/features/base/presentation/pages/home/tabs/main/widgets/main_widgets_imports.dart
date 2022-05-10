@@ -4,8 +4,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_tdd/core/bloc/wallet_cubit/wallet_cubit.dart';
 import 'package:flutter_tdd/core/constants/my_colors.dart';
+import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/helpers/eth_amount_formatter.dart';
+import 'package:flutter_tdd/core/helpers/loading_helper.dart';
 import 'package:flutter_tdd/core/routes/router_imports.gr.dart';
+import 'package:flutter_tdd/features/base/domain/entites/token_balance_params.dart';
+import 'package:flutter_tdd/features/base/domain/use_cases/get_token_balance.dart';
 import 'package:flutter_tdd/res.dart';
 import 'package:tf_custom_widgets/tf_custom_widgets.dart';
 

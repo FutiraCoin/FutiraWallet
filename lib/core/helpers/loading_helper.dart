@@ -49,6 +49,14 @@ class LoadingHelper {
       ),
     );
   }
+  showBalanceLoadingView({Color? color}) {
+    return Center(
+      child: SpinKitThreeBounce(
+        color: color ?? MyColors.primary,
+        size: 20.0,
+      ),
+    );
+  }
 
   showCatLoadingView({Color? color}) {
     return Center(

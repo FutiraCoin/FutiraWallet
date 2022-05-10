@@ -22,13 +22,21 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: BuildMainAppBar(),
-      body: ListView(
-        padding: const EdgeInsets.symmetric(vertical: 5),
-        children: [
-          BuildCurrentBalance(),
-          MainScreenButtons(),
-          MainScreenTokens(),
-        ],
+      body: BlocBuilder<WalletCubit, WalletState>(
+        builder: (context, state) {
+          return RefreshIndicator(
+            onRefresh: ()=> context.read<WalletCubit>().refreshBalance(),
+            child: ListView(
+              padding: const EdgeInsets.symmetric(vertical: 5),
+              children: [
+                BuildCurrentBalance(state: state),
+                MainScreenButtons(),
+                if(state is WalletUpdateState)
+                MainScreenTokens(),
+              ],
+            ),
+          );
+        },
       ),
     );
   }

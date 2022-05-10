@@ -50,12 +50,12 @@ class BuildCoinItem extends StatelessWidget {
                 color: MyColors.black,
                 size: 10,
               ),
-              const SizedBox(
-                height: 5,
-              ),
+              const SizedBox(height: 5),
               MyText(
                 title: "${model.percentage.toStringAsFixed(2)} %",
-                color: model.percentage > 0? MyColors.greenColor :MyColors.errorColor,
+                color: model.percentage > 0
+                    ? MyColors.greenColor
+                    : MyColors.errorColor,
                 size: 10,
               ),
             ],
