@@ -6,7 +6,7 @@ class CacheManager {
   DioCacheManager call() {
     return DioCacheManager(
       CacheConfig(
-        baseUrl: ApiNames.baseUrl,
+        // baseUrl: ApiNames.baseUrl,
         defaultRequestMethod: "POST",
       ),
     );

@@ -24,54 +24,51 @@ class HandleErrors {
       log("failed response ${response.statusCode}");
       log("failed response ${response.data}");
       var data = response.data;
-      try {
-        if (data is String) data = json.decode(response.data);
-        String message = "";
-        if(response.statusCode!=422){
-          message = errorFunc(data).toString();
-        }
-        switch (response.statusCode) {
-          case 503:
-          case 404:
-            CustomToast.showSnakeBar(message);
-            if (message == "Not Authorized") {
-              _tokenExpired();
-            }
-            break;
-          case 500:
-            CustomToast.showSnakeBar(message.toString());
-            break;
-          case 502:
-            CustomToast.showSnakeBar("check your request");
-            break;
-          case 422:
-          case 400:
-            if (data["errors"] != null) {
-              List<dynamic> errors = data["errors"];
-              log("response errors $errors");
-              List<String> lst = List<String>.from(data["errors"].map((e) => e["msg"]));
-              for (var e in lst) {
-                CustomToast.showSnakeBar(e);
-              }
-            } else {
-              CustomToast.showSnakeBar(message);
-            }
-            break;
-          case 401:
-          case 301:
-          case 302:
+      if (data is String) data = json.decode(response.data);
+      String message = "";
+      switch (response.statusCode) {
+        case 503:
+        case 404:
+          CustomToast.showSnakeBar(message);
+          if (message == "Not Authorized") {
             _tokenExpired();
-            break;
-        }
-      } catch (e) {
-        CustomToast.showSnakeBar(e.toString());
+          }
+          break;
+        // case 500:
+        //   CustomToast.showSnakeBar(message.toString());
+          break;
+        case 502:
+          CustomToast.showSnakeBar("check your request");
+          break;
+        case 422:
+        case 400:
+        case 500:
+        if (data["Errors"] != null) {
+         var errors = List<String>.from(data["Errors"].map((e) => e)).join('\n');
+          CustomToast.showSnakeBar(errors);
+        } else {
+            CustomToast.showSnakeBar(message);
+          }
+          break;
+        case 401:
+          CustomToast.showSnakeBar(data["title"].toString());
+          break;
+        case 301:
+        case 302:
+          _tokenExpired();
+          break;
       }
+      // try {
+      //
+      // } catch (e) {
+      //   CustomToast.showSnakeBar(e.toString());
+      // }
     }
   }
 
   Either<ServerFailure, Response> statusError(
       Response response, Function(dynamic) errorFunc) {
-    if (!response.data["success"]) {
+    if (response.statusCode!=200 && response.statusCode!=201) {
       CustomToast.showSnakeBar(response.data["message"].toString());
       return Left(ServerFailure());
     }

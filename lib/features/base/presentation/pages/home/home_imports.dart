@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/core/service/address_service.dart';
+import 'package:flutter_tdd/features/base/presentation/pages/home/tabs/expore/explore_imports.dart';
 import 'package:flutter_tdd/features/base/presentation/pages/home/tabs/main/main_imports.dart';
 import 'package:flutter_tdd/features/base/presentation/pages/home/tabs/settings/settings_imports.dart';
 import 'package:flutter_tdd/res.dart';

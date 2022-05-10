@@ -19,8 +19,6 @@ class Put extends DioHelper {
   Future<Either<ServerFailure, Response>> call(RequestBodyModel params) async {
     if (params.showLoader) getIt<LoadingHelper>().showLoadingDialog();
     FormData? formData = getIt<HandleRequestBody>()(params.body);
-    //create multipart request for POST or PATCH method
-
     try {
       var response =
           await dio.put(params.url, data: formData ?? json.encode(params.body));

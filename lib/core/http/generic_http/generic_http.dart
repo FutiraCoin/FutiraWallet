@@ -53,7 +53,7 @@ class GenericHttpImpl<T> extends GenericHttp<T> {
         response = await getIt<Patch>()(params);
         break;
     }
-    var customType = getIt<HandleJsonResponse<T>>()(
+    var customType = HandleJsonResponse<T>()(
       response,
       model.responseType,
       model.toJsonFunc ?? (val) {},

@@ -13,6 +13,7 @@ class MyColors{
   static const Color black= Color(0xff031626);
   static const Color blackOpacity=Colors.black54;
   static const Color white=Colors.white;
+  static const Color greenColor=Color(0xff03AE00);
   static const Color successColor=Color(0xff03A89E);
   static const Color errorColor= Colors.red;
   static const Color infoColor= Color(0xfffea632);

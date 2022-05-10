@@ -7,10 +7,10 @@ import 'package:injectable/injectable.dart';
 import '../../../errors/failures.dart';
 import '../../models/http_request_model.dart';
 
-@lazySingleton
-class HandleJsonResponse<BaseModel> {
+// @lazySingleton
+class HandleJsonResponse<T> {
 
-  Future<Either<ServerFailure, BaseModel>> call(
+   Future<Either<ServerFailure, T>> call(
       Either<ServerFailure, Response> response,
       ResType responseType,
       _ToJsonFunc toJsonFunc,
