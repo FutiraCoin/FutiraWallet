@@ -11,7 +11,7 @@ class CustomWalletItem extends StatelessWidget {
       child: Row(
         children: [
           Visibility(
-            visible: model.imageLink != null,
+            visible: model.imageLink != null || model.imageLink != "",
             replacement: Container(
               decoration: BoxDecoration(
                   color: MyColors.greyWhite, shape: BoxShape.circle),
