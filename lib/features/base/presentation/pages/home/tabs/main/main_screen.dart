@@ -8,7 +8,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-
   final MainData mainData = MainData();
 
   @override
@@ -17,7 +16,6 @@ class _MainScreenState extends State<MainScreen> {
     super.initState();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,14 +23,13 @@ class _MainScreenState extends State<MainScreen> {
       body: BlocBuilder<WalletCubit, WalletState>(
         builder: (context, state) {
           return RefreshIndicator(
-            onRefresh: ()=> context.read<WalletCubit>().refreshBalance(),
+            onRefresh: () => context.read<WalletCubit>().refreshBalance(),
             child: ListView(
               padding: const EdgeInsets.symmetric(vertical: 5),
               children: [
                 BuildCurrentBalance(state: state),
                 MainScreenButtons(),
-                if(state is WalletUpdateState)
-                MainScreenTokens(),
+                if (state is WalletUpdateState) MainScreenTokens(),
               ],
             ),
           );

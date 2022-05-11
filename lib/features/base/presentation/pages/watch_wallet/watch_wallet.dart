@@ -29,7 +29,6 @@ class _WatchWalletState extends State<WatchWallet> {
                   letterSpace: 1.1,
                 ),
                 WatchWalletForm(walletData:walletData),
-
               ],
             ),
           ),

@@ -8,8 +8,6 @@ class FirstTab extends StatefulWidget {
 }
 
 class _FirstTabState extends State<FirstTab> {
-
-
   @override
   void initState() {
     super.initState();
@@ -17,13 +15,16 @@ class _FirstTabState extends State<FirstTab> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.max,
+    return ListView(
+      // mainAxisSize: MainAxisSize.max,
       children: const [
-        BuildIntroHeader(image: Res.welcome1,),
+        BuildIntroHeader(
+          image: Res.welcome1,
+        ),
         BuildIntroContent(
           title: "Simple",
-          subTitle: "Pay and get paid or send money to friends without fees or friction.",
+          subTitle:
+              "Pay and get paid or send money to friends without fees or friction.",
         ),
       ],
     );

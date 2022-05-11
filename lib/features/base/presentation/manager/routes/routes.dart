@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter_tdd/features/base/presentation/pages/add_custom_wallet/add_custom_wallet_imports.dart';
 import 'package:flutter_tdd/features/base/presentation/pages/home/home_imports.dart';
 
 import '../../../../general/presentation/pages/terms/terms_imports.dart';
@@ -10,6 +11,7 @@ import '../../pages/my_wallets/my_wallets_imports.dart';
 import '../../pages/privacy_policy/privacy_policy_imports.dart';
 import '../../pages/profile/profile_imports.dart';
 import '../../pages/send_coins/send_coins_imports.dart';
+import '../../pages/show_custom_wallet/show_custom_wallet_imports.dart';
 import '../../pages/support/support_imports.dart';
 import '../../pages/swap/swap_imports.dart';
 import '../../pages/watch_wallet/watch_wallet_imports.dart';
@@ -28,4 +30,6 @@ const List<AutoRoute> baseRoute = [
   AutoRoute(page: Support),
   AutoRoute(page: PrivacyPolicy),
   AutoRoute(page: Terms),
+  AutoRoute(page: AddCustomWallet),
+  AutoRoute(page: ShowCustomWallet),
 ];

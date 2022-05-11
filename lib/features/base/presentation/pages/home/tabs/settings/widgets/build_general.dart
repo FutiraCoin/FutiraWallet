@@ -1,8 +1,8 @@
-part of'settings_widgets_imports.dart';
+part of 'settings_widgets_imports.dart';
 
 class BuildGeneral extends StatelessWidget {
   final SettingsData settingsData;
-  const BuildGeneral({Key? key,required this.settingsData}) : super(key: key);
+  const BuildGeneral({Key? key, required this.settingsData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,12 +10,37 @@ class BuildGeneral extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         MyText(title: "General", color: MyColors.primary, size: 12),
-        const SizedBox(height: 5,),
-        BuildClickableItem(title: "My Wallets", onTap: () =>AutoRouter.of(context).push(MyWalletsRoute()),),
-        BuildClickableItem(title: "Security", onTap: () {},),
-        BuildClickableItem(title: "Currency", onTap: () =>AutoRouter.of(context).push(CurrencyRoute()),),
-        BuildClickableItem(title: "Languages", onTap: () =>AutoRouter.of(context).push(LanguageRoute()),),
-        BuildDarkMode(settingsData: settingsData,),
-    ],);
+        const SizedBox(
+          height: 5,
+        ),
+        BuildClickableItem(
+          title: "My Wallets",
+          onTap: () => AutoRouter.of(context).push(MyWalletsRoute()),
+        ),
+        BuildClickableItem(
+          title: "Add Custom Wallet",
+          onTap: () => AutoRouter.of(context).push(AddCustomWalletRoute()),
+        ),
+        BuildClickableItem(
+          title: "show Custom Wallet",
+          onTap: () => AutoRouter.of(context).push(ShowCustomWalletRoute()),
+        ),
+        BuildClickableItem(
+          title: "Security",
+          onTap: () {},
+        ),
+        BuildClickableItem(
+          title: "Currency",
+          onTap: () => AutoRouter.of(context).push(CurrencyRoute()),
+        ),
+        BuildClickableItem(
+          title: "Languages",
+          onTap: () => AutoRouter.of(context).push(LanguageRoute()),
+        ),
+        BuildDarkMode(
+          settingsData: settingsData,
+        ),
+      ],
+    );
   }
 }
