@@ -3,7 +3,9 @@ import 'package:flutter_tdd/core/errors/failures.dart';
 import 'package:flutter_tdd/core/http/generic_http/api_names.dart';
 import 'package:flutter_tdd/core/http/generic_http/generic_http.dart';
 import 'package:flutter_tdd/core/http/models/http_request_model.dart';
+import 'package:flutter_tdd/core/usecases/use_case.dart';
 import 'package:flutter_tdd/features/base/data/models/coin/coin_model.dart';
+import 'package:flutter_tdd/features/base/data/models/dapp/app_model.dart';
 import 'package:flutter_tdd/features/base/domain/entites/explore_params.dart';
 import 'package:flutter_tdd/features/base/domain/entites/token_balance_params.dart';
 import 'package:injectable/injectable.dart';
@@ -38,6 +40,20 @@ class ImplHomeRemoteDataSource extends HomeRemoteDataSource {
       responseKey: (json)=> json["result"]
     );
     return await GenericHttpImpl<String>()(model);
+  }
+
+  @override
+  Future<Either<Failure, List<AppModel>>> getApps(bool param)async {
+    HttpRequestModel model = HttpRequestModel(
+      url: ApiNames.appsUrl,
+      requestMethod: RequestMethod.get,
+      responseType: ResType.list,
+      refresh: param,
+      responseKey: (json)=> json["dapps"],
+      toJsonFunc: (json) =>
+      List<AppModel>.from(json.map((e) => AppModel.fromJson(e))),
+    );
+    return await GenericHttpImpl<List<AppModel>>()(model);
   }
 
 

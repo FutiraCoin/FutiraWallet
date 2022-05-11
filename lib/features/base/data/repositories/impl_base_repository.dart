@@ -3,6 +3,7 @@ import 'package:flutter_tdd/core/errors/failures.dart';
 import 'package:flutter_tdd/core/helpers/di.dart';
 import 'package:flutter_tdd/features/base/data/data_sources/home_remote_data_source.dart';
 import 'package:flutter_tdd/features/base/data/models/coin/coin_model.dart';
+import 'package:flutter_tdd/features/base/data/models/dapp/app_model.dart';
 import 'package:flutter_tdd/features/base/domain/entites/explore_params.dart';
 import 'package:flutter_tdd/features/base/domain/entites/token_balance_params.dart';
 import 'package:flutter_tdd/features/base/domain/repositories/base_repository.dart';
@@ -20,6 +21,11 @@ class ImplBaseRepository extends BaseRepository {
   @override
   Future<Either<Failure, String>> getTokenBalance(TokenBalanceParams param) {
     return getIt<HomeRemoteDataSource>().getTokenBalance(param);
+  }
+
+  @override
+  Future<Either<Failure, List<AppModel>>> getApps(bool param) {
+    return getIt<HomeRemoteDataSource>().getApps(param);
   }
 
 

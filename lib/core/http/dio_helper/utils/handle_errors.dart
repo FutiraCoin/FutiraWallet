@@ -68,7 +68,7 @@ class HandleErrors {
 
   Either<ServerFailure, Response> statusError(
       Response response, Function(dynamic) errorFunc) {
-    if (response.statusCode!=200 && response.statusCode!=201) {
+    if (response.statusCode!=200 && response.statusCode!=201&& response.statusCode!=206) {
       CustomToast.showSnakeBar(response.data["message"].toString());
       return Left(ServerFailure());
     }

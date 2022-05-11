@@ -26,8 +26,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
           physics: NeverScrollableScrollPhysics(),
           children: [
             MainScreen(),
-            Container(),
             Explore(),
+            AppsScreen(),
             Settings(),
           ],
         ),

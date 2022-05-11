@@ -11,14 +11,7 @@ class HelperMethods{
   static HelperMethods get instance => HelperMethods._();
 
   void launchURL({required String url}) async {
-    if (!url.toString().startsWith("https")) {
-      url = "https://" + url;
-    }
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      CustomToast.showSimpleToast(msg: "من فضلك تآكد من الرابط");
-    }
+    await launchUrl(Uri.parse(url));
   }
 
   void launchWhatsApp(phone) async {

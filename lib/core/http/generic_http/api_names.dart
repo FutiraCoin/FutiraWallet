@@ -6,6 +6,7 @@ class ApiNames{
   static String marketCoins = marketBaseUrl + "markets";
   // tokens routes
   static const String tokenBaseUrl = "https://api-testnet.bscscan.com/api";
+  static const String appsUrl = "https://dappradar.com/v2/api/dapps";
 
 
 
