@@ -1,4 +1,4 @@
-# flutter_tdd
+# Futira Wallet
 
 A new Flutter project.
 
