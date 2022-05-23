@@ -17,6 +17,7 @@ void main() async {
   await configureDependencies();
   getIt.registerSingleton(CustomWalletDb());
 
+
   await createProviders();
   runApp(
     BlocProvider(
@@ -24,4 +25,7 @@ void main() async {
       child: Phoenix(child: const MyApp()),
     ),
   );
+
+
+
 }
